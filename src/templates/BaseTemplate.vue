@@ -135,18 +135,17 @@ header {
 
 nav {
   a {
-    svg {
-      color: var(--dark-gray);
+    color: var(--dark-gray);
 
+    &.router-link-active {
+        color: var(--bright-green);
+
+    }
+
+    svg {
       /* SETS SIZE FOR KOSMOOS LINK */
       width: 300px;
       height: 50px;
-
-      &.router-link-active {
-        svg {
-          color: var(--bright-green);
-        }
-      }
     }
   }
 
