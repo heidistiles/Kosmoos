@@ -5,7 +5,7 @@
   <header>
     <nav>
       <RouterLink :to="{ name: 'Control' }">
-        <svg role="img" aria-label="Kosmoos Mission Control" width="200px" height="50px" viewBox="0 0 281.55 43.26" xmlns="http://www.w3.org/2000/svg">
+        <svg role="img" aria-label="Kosmoos Mission Control" viewBox="0 0 281.55 43.26" xmlns="http://www.w3.org/2000/svg">
           <title>Kosmoos Mission Control</title>
           <path fill="currentColor" d="M27.46,1.73c0.21,0.51,0.28,1.07,0.19,1.66c-0.04,0.55-0.28,1.07-0.7,1.54L12.29,21.06
 	c-0.38,0.38-0.38,0.79,0,1.22l14.66,16.06c0.43,0.43,0.66,0.94,0.7,1.54c0.09,0.55,0.02,1.09-0.19,1.6c-0.21,0.55-0.58,1-1.09,1.34
@@ -60,7 +60,7 @@
       </RouterLink>
       <div>
         <RouterLink :to="{ name: 'Exploration' }">
-          <svg width="100px" height="100px" role="img" aria-label="Exploration Hub" xmlns="http://www.w3.org/2000/svg">
+          <svg role="img" aria-label="Exploration Hub" viewBox="0 0 68.47 41" xmlns="http://www.w3.org/2000/svg">
             <title>Exploration Hub</title>
             <path fill="currentColor" d="M68.24,9.24c-1.72-4.88-11.41-4.21-19.24-2.79c-0.34,0.06-0.71,0.14-1.06,0.21C44.18,2.58,38.82,0,32.85,0
     C21.87,0,12.91,8.68,12.4,19.53c-0.36,0.2-0.71,0.4-1.05,0.6c-8.63,5.02-12.37,9.4-11.1,13c0.98,2.78,4.55,3.82,9.29,3.82
@@ -73,7 +73,7 @@
           </svg>
         </RouterLink>
         <RouterLink :to="{ name: 'Inventory' }">
-          <svg width="100px" height="100px" viewBox="0 0 41.96 61.07" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 41.96 61.07" xmlns="http://www.w3.org/2000/svg">
             <g>
               <path fill="currentColor" d="M41.96,20.5c0-11.3-9.2-20.5-20.5-20.5S0.96,9.2,0.96,20.5c0,4.94,1.76,9.49,4.69,13.03L0,56.38l11.07-5.3
                 l7.45,9.7l2-8.35l2.32,8.65l7.18-9.9l11.17,4.98L35.6,35.3C39.51,31.57,41.96,26.32,41.96,20.5z M21.46,4c9.1,0,16.5,7.4,16.5,16.5
@@ -86,7 +86,7 @@
           </svg>
         </RouterLink>
         <RouterLink :to="{ name: 'Archives' }">
-          <svg width="100px" height="100px" viewBox="0 0 51.45 55.44" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 51.45 55.44" xmlns="http://www.w3.org/2000/svg">
             <g>
               <path fill="currentColor" d="M29,20.5c0,4.69-3.81,8.5-8.5,8.5v4C27.39,33,33,27.39,33,20.5H29z"/>
               <path fill="currentColor" d="M50.47,49.74L35.34,34.61C38.84,30.93,41,25.97,41,20.5C41,9.2,31.8,0,20.5,0C9.2,0,0,9.2,0,20.5
@@ -97,7 +97,7 @@
           </svg>
         </RouterLink>
         <RouterLink :to="{ name: 'Protocol' }">
-          <svg width="100px" height="100px" xmlns="http://www.w3.org/2000/svg">
+          <svg xmlns="http://www.w3.org/2000/svg">
             <g>
                 <path fill="currentColor" d="M26.36,10.29c-0.66-0.4-1.39-0.59-2.18-0.59h-6.34c-0.79,0-1.53,0.2-2.21,0.59c-0.66,0.4-1.19,0.92-1.58,1.58
                   c-0.4,0.66-0.59,1.39-0.59,2.18v2.41c0,0.42,0.14,0.77,0.43,1.06c0.31,0.26,0.67,0.4,1.09,0.4h0.92c0.4,0,0.74-0.13,1.02-0.4
@@ -137,18 +137,45 @@ nav {
   a {
     svg {
       color: var(--dark-gray);
-      border: 1px solid red;
-      }
+
+      /* SETS SIZE FOR KOSMOOS LINK */
+      width: 300px;
+      height: 50px;
 
       &.router-link-active {
         svg {
           color: var(--bright-green);
+        }
       }
     }
   }
+
   div {
     display: flex;
     justify-content: center;
+
+    /* SETS SIZES FOR SUB PAGE LINKS */
+    svg {
+      &:nth-child(1) {
+        width: 50px;
+        height: 50px;
+      }
+
+      &:nth-child(2) {
+        width: 50px;
+        height: 50px;
+      }
+
+      &:nth-child(3) {
+        width: 50px;
+        height: 50px;
+      }
+
+      &:nth-child(4) {
+        width: 50px;
+        height: 50px;
+      }
+    }
   }
 }
 </style>
