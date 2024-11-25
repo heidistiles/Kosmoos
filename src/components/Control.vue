@@ -4,6 +4,7 @@ document.title = 'Kosmoonaut Mission Control'
 </script>
 
 <template>
+  <base-template>
     <section>
       <h2>Greetings, Kosmoonaut!</h2>
       <div></div>
@@ -12,6 +13,7 @@ document.title = 'Kosmoonaut Mission Control'
       <router-link :to="{ name: 'Exploration' }">View mission artifacts</router-link>
       <router-link :to="{ name: 'Exploration' }">Search data archives</router-link>
     </section>
+  </base-template>
 </template>
 
 <style scoped>
