@@ -4,7 +4,7 @@
 <template>
   <header>
     <nav>
-      <RouterLink :to="{ name: 'Control' }">
+      <router-link :to="{ name: 'Control' }">
         <svg role="img" aria-label="Kosmoos Mission Control" viewBox="0 0 281.55 43.26" xmlns="http://www.w3.org/2000/svg">
           <title>Kosmoos Mission Control</title>
           <path fill="currentColor" d="M27.46,1.73c0.21,0.51,0.28,1.07,0.19,1.66c-0.04,0.55-0.28,1.07-0.7,1.54L12.29,21.06
@@ -57,9 +57,9 @@
 	c-0.17,0.17-0.26,0.38-0.26,0.64v5.76c0,0.51,0.21,0.83,0.64,0.96l15.42,5.76c1.66,0.6,3.01,1.64,4.03,3.14
 	c1.02,1.49,1.54,3.11,1.54,4.86V34.82z"/>
         </svg>
-      </RouterLink>
+      </router-link>
       <div>
-        <RouterLink :to="{ name: 'Exploration' }">
+        <router-link :to="{ name: 'Exploration' }">
           <svg role="img" aria-label="Exploration Hub" viewBox="0 0 68.47 41" xmlns="http://www.w3.org/2000/svg">
             <title>Exploration Hub</title>
             <path fill="currentColor" d="M68.24,9.24c-1.72-4.88-11.41-4.21-19.24-2.79c-0.34,0.06-0.71,0.14-1.06,0.21C44.18,2.58,38.82,0,32.85,0
@@ -71,8 +71,8 @@
     c4.8-1.14,9.44-2.55,13.04-3.81c3.02-1.06,6.69-2.5,10.42-4.19C45.62,32.77,39.72,37,32.85,37z M53.32,19.81
     c-0.12-3.48-1.1-6.73-2.74-9.57c9.88-1.68,13.65-0.37,13.89,0.32C64.87,11.73,61.31,15.44,53.32,19.81z"/>
           </svg>
-        </RouterLink>
-        <RouterLink :to="{ name: 'Inventory' }">
+        </router-link>
+        <router-link :to="{ name: 'Inventory' }">
           <svg viewBox="0 0 41.96 61.07" xmlns="http://www.w3.org/2000/svg">
             <g>
               <path fill="currentColor" d="M41.96,20.5c0-11.3-9.2-20.5-20.5-20.5S0.96,9.2,0.96,20.5c0,4.94,1.76,9.49,4.69,13.03L0,56.38l11.07-5.3
@@ -84,8 +84,8 @@
                  M21.46,14c3.58,0,6.5,2.92,6.5,6.5s-2.92,6.5-6.5,6.5s-6.5-2.92-6.5-6.5S17.87,14,21.46,14z"/>
             </g>
           </svg>
-        </RouterLink>
-        <RouterLink :to="{ name: 'Archives' }">
+        </router-link>
+        <router-link :to="{ name: 'Archives' }">
           <svg viewBox="0 0 51.45 55.44" xmlns="http://www.w3.org/2000/svg">
             <g>
               <path fill="currentColor" d="M29,20.5c0,4.69-3.81,8.5-8.5,8.5v4C27.39,33,33,27.39,33,20.5H29z"/>
@@ -95,9 +95,9 @@
                 C37,29.6,29.6,37,20.5,37S4,29.6,4,20.5z"/>
             </g>
           </svg>
-        </RouterLink>
-        <RouterLink :to="{ name: 'Protocol' }">
-          <svg xmlns="http://www.w3.org/2000/svg">
+        </router-link>
+        <router-link :to="{ name: 'Protocol' }">
+          <svg viewBox="0 0 41 41" xmlns="http://www.w3.org/2000/svg">
             <g>
                 <path fill="currentColor" d="M26.36,10.29c-0.66-0.4-1.39-0.59-2.18-0.59h-6.34c-0.79,0-1.53,0.2-2.21,0.59c-0.66,0.4-1.19,0.92-1.58,1.58
                   c-0.4,0.66-0.59,1.39-0.59,2.18v2.41c0,0.42,0.14,0.77,0.43,1.06c0.31,0.26,0.67,0.4,1.09,0.4h0.92c0.4,0,0.74-0.13,1.02-0.4
@@ -113,7 +113,7 @@
                   C11.4,37,4,29.6,4,20.5C4,11.4,11.4,4,20.5,4S37,11.4,37,20.5C37,29.6,29.6,37,20.5,37z"/>
               </g>
           </svg>
-        </RouterLink>
+        </router-link>
       </div>
     </nav>
   </header>
@@ -123,58 +123,66 @@
   </main>
 
   <footer>
-    <div>Hello</div>
   </footer>
 </template>
 
 <style scoped>
-header {
-  background-image: url("../assets/SVGs/MobilePortrait/KosmoosHeaderMobilePortrait.svg");
-  background-repeat: no-repeat;
-}
+  header, footer {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 
-nav {
-  a {
-    color: var(--dark-gray);
+  header {
+    background-image: url("../assets/SVGs/MobilePortrait/KosmoosHeaderMobilePortrait.svg");
+    background-color: lime;
+  }
 
-    &.router-link-active {
-        color: var(--bright-green);
+    nav {
+      a {
+        color: var(--dark-gray);
 
-    }
+        &.router-link-active {
+          color: var(--bright-green);
 
-    svg {
-      /* SETS SIZE FOR KOSMOOS LINK */
-      width: 300px;
-      height: 50px;
+        }
+
+        svg {
+          /* SETS SIZE FOR KOSMOOS LINK */
+          width: 300px;
+          height: 50px;
+        }
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+
+        /* SETS SIZES FOR SUB PAGE LINKS */
+        svg {
+          &:nth-child(1) {
+            width: 50px;
+            height: 50px;
+          }
+
+          &:nth-child(2) {
+            width: 50px;
+            height: 50px;
+          }
+
+          &:nth-child(3) {
+            width: 50px;
+            height: 50px;
+          }
+
+          &:nth-child(4) {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
     }
   }
 
-  div {
-    display: flex;
-    justify-content: center;
-
-    /* SETS SIZES FOR SUB PAGE LINKS */
-    svg {
-      &:nth-child(1) {
-        width: 50px;
-        height: 50px;
-      }
-
-      &:nth-child(2) {
-        width: 50px;
-        height: 50px;
-      }
-
-      &:nth-child(3) {
-        width: 50px;
-        height: 50px;
-      }
-
-      &:nth-child(4) {
-        width: 50px;
-        height: 50px;
-      }
-    }
+  footer {
+    background-image: url("../assets/SVGs/MobilePortrait/KosmoosFooterMobilePortrait.svg"), url("../assets/SVGs/MobilePortrait/KosmoosFooterMobilePortraitBackground.svg");;
   }
-}
 </style>

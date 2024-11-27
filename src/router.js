@@ -1,4 +1,5 @@
 import {createRouter, createWebHistory} from 'vue-router'
+
 import Archives from "./components/Archives.vue";
 import Artifact from "./components/Artifact.vue";
 import Challenge from "./components/Challenge.vue";
@@ -35,16 +36,35 @@ const router = createRouter({
 
         //Planet Info
         {
-            path: '/planets/planetname',
+            path: '/planets/',
             name: 'Planet',
-            component: Planet
+            children: [
+                {
+                    path: ':planet_name',
+                    name: 'Yada',
+                    component: Planet,
+                    meta: {
+                        title: ':planet_name'
+                    }
+                }
+            ]
+
         },
 
         //Planet Tests
         {
-            path: '/challenge/planetname',
+            path: '/challenge/',
             name: 'Challenge',
-            component: Challenge
+            children: [
+                {
+                    path:':id',
+                    name: 'Dada',
+                    component: Challenge,
+                    meta: {
+                        title: ':id',
+                    }
+                }
+            ]
         },
 
         //Test Results
