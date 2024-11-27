@@ -2,11 +2,11 @@ import {createRouter, createWebHistory} from 'vue-router'
 
 import Archives from "./components/Archives.vue";
 import Artifact from "./components/Artifact.vue";
-import Challenge from "./components/Challenge.vue";
+// import Challenge from "./components/Challenge.vue";
 import Control from "./components/Control.vue";
 import Exploration from "./components/Exploration.vue";
 import Inventory from "./components/Inventory.vue";
-import Planet from "./components/Planet.vue";
+// import Planet from "./components/Planet.vue";
 import Protocol from "./components/Protocol.vue";
 import Resources from "./components/Resources.vue";
 import Results from "./components/Results.vue";
@@ -34,38 +34,19 @@ const router = createRouter({
             component: Exploration
         },
 
-        //Planet Info
-        {
-            path: '/planets/',
-            name: 'Planet',
-            children: [
-                {
-                    path: ':planet_name',
-                    name: 'Yada',
-                    component: Planet,
-                    meta: {
-                        title: ':planet_name'
-                    }
-                }
-            ]
-
-        },
+        // Planet Info
+        // {
+        //     path: '/planets/planetname',
+        //     name: 'Planet',
+        //     component: Planet
+        // },
 
         //Planet Tests
-        {
-            path: '/challenge/',
-            name: 'Challenge',
-            children: [
-                {
-                    path:':id',
-                    name: 'Dada',
-                    component: Challenge,
-                    meta: {
-                        title: ':id',
-                    }
-                }
-            ]
-        },
+        // {
+        //     path: '/challenge/planetname',
+        //     name: 'Challenge',
+        //     component: Challenge
+        // },
 
         //Test Results
         {

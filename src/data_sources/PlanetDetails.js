@@ -9,7 +9,7 @@ const data = [
         "poetry_in_motion": "Face to face client-driven encryption",
         "drawn_together": "Face to face client-driven encryption",
         "mission_accomplished": "Face to face client-driven encryption",
-        "fun-facts": "Face to face client-driven encryption"
+        "fun_facts": "Face to face client-driven encryption"
     },
     {
         "id": "",
@@ -21,7 +21,7 @@ const data = [
         "poetry_in_motion": "Face to face client-driven encryption",
         "drawn_together": "Face to face client-driven encryption",
         "mission_accomplished": "Face to face client-driven encryption",
-        "fun-facts": "Face to face client-driven encryption"
+        "fun_facts": "Face to face client-driven encryption"
     },
     {
         "id": "",
@@ -33,7 +33,7 @@ const data = [
         "poetry_in_motion": "Face to face client-driven encryption",
         "drawn_together": "Face to face client-driven encryption",
         "mission_accomplished": "Face to face client-driven encryption",
-        "fun-facts": "Face to face client-driven encryption"
+        "fun_facts": "Face to face client-driven encryption"
     },
     {
         "id": "",
@@ -45,7 +45,7 @@ const data = [
         "poetry_in_motion": "Face to face client-driven encryption",
         "drawn_together": "Face to face client-driven encryption",
         "mission_accomplished": "Face to face client-driven encryption",
-        "fun-facts": "Face to face client-driven encryption"
+        "fun_facts": "Face to face client-driven encryption"
     },
     {
         "id": "",
@@ -57,7 +57,7 @@ const data = [
         "poetry_in_motion": "Face to face client-driven encryption",
         "drawn_together": "Face to face client-driven encryption",
         "mission_accomplished": "Face to face client-driven encryption",
-        "fun-facts": "Face to face client-driven encryption"
+        "fun_facts": "Face to face client-driven encryption"
     },
     {
         "id": "",
@@ -69,7 +69,7 @@ const data = [
         "poetry_in_motion": "Face to face client-driven encryption",
         "drawn_together": "Face to face client-driven encryption",
         "mission_accomplished": "Face to face client-driven encryption",
-        "fun-facts": "Face to face client-driven encryption"
+        "fun_facts": "Face to face client-driven encryption"
     },
     {
         "id": "",
@@ -81,7 +81,7 @@ const data = [
         "poetry_in_motion": "Face to face client-driven encryption",
         "drawn_together": "Face to face client-driven encryption",
         "mission_accomplished": "Face to face client-driven encryption",
-        "fun-facts": "Face to face client-driven encryption"
+        "fun_facts": "Face to face client-driven encryption"
     },
     {
         "id": "",
@@ -93,6 +93,6 @@ const data = [
         "poetry_in_motion": "Face to face client-driven encryption",
         "drawn_together": "Face to face client-driven encryption",
         "mission_accomplished": "Face to face client-driven encryption",
-        "fun-facts": "Face to face client-driven encryption"
+        "fun_facts": "Face to face client-driven encryption"
     }
 ]
