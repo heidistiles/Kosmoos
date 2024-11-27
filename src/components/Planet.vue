@@ -1,31 +1,34 @@
 <script setup>
-// import {onMounted} from "vue";
-// import {useRoute, useRouter} from 'vue-router';
+import {onMounted} from "vue";
+import {useRoute, useRouter} from 'vue-router';
 
 import BaseTemplate from "../templates/BaseTemplate.vue";
 
 import planetDetails from "../data_sources/PlanetDetails.js";
 
-// const route = useRoute();
-// const router = useRouter();
-// const paramId = route.params.id;
-// const testQuestion = testQuestions.data.filter(testQuestion => testQuestion.id === paramId)[0]
-//
-// onMounted(() => {
-//   if (!testQuestion) {
-//     router.push({
-//       name: 'Control'
-//     })
-//   }
-// })
+const route = useRoute();
+const router = useRouter();
+const parameter = route.params.planetName;
+const planet = planetDetails.planets.filter(planet => planet.id === parameter)[0]
+
+onMounted(() => {
+  if (!planet) {
+    router.push({
+      name: 'Control'
+    })
+  }
+})
 
 document.title = 'Planet Mission Data'
 </script>
 
 <template>
-  <base-template v-for="(planet, index) in planetDetails.data" :key="index">
+  <base-template v-if="planet">
+
+    <pre> {{ planet }}</pre>
+
     <h2>{{ planet.planet_name }}/10</h2>
-<!--    <img :src="'../assets/' + planet_img + '.png'">-->
+    <img :src="'../assets/' + planet_img + '.png'">
 
     <h3>Caught on Camera</h3>
     <p>{{ planet.caught_on_camera }}</p>

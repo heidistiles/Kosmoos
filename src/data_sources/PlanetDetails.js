@@ -1,6 +1,6 @@
-const data = [
+const planets = [
     {
-        "id": "",
+        "id": "mercury",
         "planet_name": "Mercury",
         "planet_img": "Urrey",
         "caught_on_camera": "surrey0@cafepress.com",
@@ -12,7 +12,7 @@ const data = [
         "fun_facts": "Face to face client-driven encryption"
     },
     {
-        "id": "",
+        "id": "venus",
         "planet_name": "Venus",
         "planet_img": "Urrey",
         "caught_on_camera": "surrey0@cafepress.com",
@@ -24,7 +24,7 @@ const data = [
         "fun_facts": "Face to face client-driven encryption"
     },
     {
-        "id": "",
+        "id": "earth",
         "planet_name": "Earth",
         "planet_img": "Urrey",
         "caught_on_camera": "surrey0@cafepress.com",
@@ -36,7 +36,7 @@ const data = [
         "fun_facts": "Face to face client-driven encryption"
     },
     {
-        "id": "",
+        "id": "mars",
         "planet_name": "Mars",
         "planet_img": "Urrey",
         "caught_on_camera": "surrey0@cafepress.com",
@@ -48,7 +48,7 @@ const data = [
         "fun_facts": "Face to face client-driven encryption"
     },
     {
-        "id": "",
+        "id": "jupiter",
         "planet_name": "Jupiter",
         "planet_img": "Urrey",
         "caught_on_camera": "surrey0@cafepress.com",
@@ -60,7 +60,7 @@ const data = [
         "fun_facts": "Face to face client-driven encryption"
     },
     {
-        "id": "",
+        "id": "saturn",
         "planet_name": "Saturn",
         "planet_img": "Urrey",
         "caught_on_camera": "surrey0@cafepress.com",
@@ -72,7 +72,7 @@ const data = [
         "fun_facts": "Face to face client-driven encryption"
     },
     {
-        "id": "",
+        "id": "uranus",
         "planet_name": "Uranus",
         "planet_img": "Urrey",
         "caught_on_camera": "surrey0@cafepress.com",
@@ -84,7 +84,7 @@ const data = [
         "fun_facts": "Face to face client-driven encryption"
     },
     {
-        "id": "",
+        "id": "neptune",
         "planet_name": "Neptune",
         "planet_img": "Urrey",
         "caught_on_camera": "surrey0@cafepress.com",
@@ -96,3 +96,5 @@ const data = [
         "fun_facts": "Face to face client-driven encryption"
     }
 ]
+
+export default { planets }

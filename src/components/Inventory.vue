@@ -5,9 +5,7 @@ document.title = 'Artifact Inventory Log'
 </script>
 
 <template>
-  <base-template>
-
-  </base-template>
+  <base-template></base-template>
 </template>
 
 <style scoped>

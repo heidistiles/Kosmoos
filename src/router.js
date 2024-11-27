@@ -2,11 +2,11 @@ import {createRouter, createWebHistory} from 'vue-router'
 
 import Archives from "./components/Archives.vue";
 import Artifact from "./components/Artifact.vue";
-// import Challenge from "./components/Challenge.vue";
+import Challenge from "./components/Challenge.vue";
 import Control from "./components/Control.vue";
 import Exploration from "./components/Exploration.vue";
 import Inventory from "./components/Inventory.vue";
-// import Planet from "./components/Planet.vue";
+import Planet from "./components/Planet.vue";
 import Protocol from "./components/Protocol.vue";
 import Resources from "./components/Resources.vue";
 import Results from "./components/Results.vue";
@@ -18,7 +18,7 @@ const router = createRouter({
         //Home
         {
             path: "/",
-            redirect: { name: 'Control'}
+            redirect: {name: 'Control'}
         },
 
         {
@@ -31,57 +31,74 @@ const router = createRouter({
         {
             path: '/exploration-hub',
             name: 'Exploration',
-            component: Exploration
-        },
+            children: [
+                {
+                    path: '',
+                    name: 'ExplorationHub',
+                    component: Exploration,
+                },
 
-        // Planet Info
-        // {
-        //     path: '/planets/planetname',
-        //     name: 'Planet',
-        //     component: Planet
-        // },
+                // Planet Details
+                {
+                    path: 'info/:planetName',
+                    name: 'PlanetDetails',
+                    component: Planet
+                },
 
-        //Planet Tests
-        // {
-        //     path: '/challenge/planetname',
-        //     name: 'Challenge',
-        //     component: Challenge
-        // },
+                //Planet Tests
+                {
+                    path: 'challenge/:questionId',
+                    name: 'ChallengeQuestion',
+                    component: Challenge
+                },
 
-        //Test Results
-        {
-            path: '/challenge/results',
-            name: 'Results',
-            component: Results
+                //Test Results
+                {
+                    path: 'challenge/results',
+                    name: 'Results',
+                    component: Results
+                },
+            ]
         },
 
         //Achievement Start
         {
             path: '/artifact-inventory',
-            name: 'Inventory',
-            component: Inventory
-        },
+            name: 'Artifacts',
+            children: [
+                {
+                    path: '',
+                    name: 'ArtifactInventory',
+                    component: Inventory
+                },
 
-        //Achievement Info
-        {
-            path: '/schematics/gravity-speeder',
-            name: 'Artifact',
-            component: Artifact
+                //Achievement Info
+                {
+                    path: '/schematics/:artifactId',
+                    name: 'Artifact',
+                    component: Artifact
+                },
+            ]
         },
-
 
         //Research Start
         {
             path: '/research-archives',
             name: 'Archives',
-            component: Archives
-        },
+            children: [
+                {
+                    path: '',
+                    name: 'ResearchArchives',
+                    component: Archives
+                },
 
-        //Research Info
-        {
-            path: '/resources/books',
-            name: 'Resources',
-            component: Resources
+                //Research Info
+                {
+                    path: '/resources/books',
+                    name: 'ResearchResources',
+                    component: Resources
+                },
+            ]
         },
 
         //Site Purpose

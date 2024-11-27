@@ -1,29 +1,29 @@
 <script setup>
-// import {onMounted} from "vue";
-// import {useRoute, useRouter} from 'vue-router';
+import {onMounted} from "vue";
+import {useRoute, useRouter} from 'vue-router';
 
 import BaseTemplate from "../templates/BaseTemplate.vue";
 
 import testQuestions from "../data_sources/TestQuestions.js";
 
-// const route = useRoute();
-// const router = useRouter();
-// const paramId = route.params.id;
-// const testQuestion = testQuestions.data.filter(testQuestion => testQuestion.id === paramId)[0]
-//
-// onMounted(() => {
-//   if (!testQuestion) {
-//     router.push({
-//       name: 'Control'
-//     })
-//   }
-// })
+const route = useRoute();
+const router = useRouter();
+const parameter = route.params.questionId;
+const question = testQuestions.questions.filter(question => question.id === parameter)[0]
+
+onMounted(() => {
+  if (!question) {
+    router.push({
+      name: 'Control'
+    })
+  }
+})
 
 document.title = 'Planet Mission Challenge'
 </script>
 
 <template>
-  <base-template v-for="(question, index) in testQuestions.data" :key="index">
+  <base-template v-if="question">
     <h2>{{ question.question_no }}/10</h2>
     <p>{{ question.question }}</p>
     <div>

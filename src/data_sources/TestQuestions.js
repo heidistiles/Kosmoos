@@ -1,6 +1,6 @@
-const data = [
+const questions = [
     {
-        "id": "Mercury1",
+        "id": "mercury1",
         "question_no": "1",
         "question": "Lorem ipsum yada yada and that's all folks",
         "I": "Ooo eee",
@@ -10,7 +10,7 @@ const data = [
         "next-route": "Bing bang",
     },
     {
-        "id": "Mercury2",
+        "id": "mercury2",
         "question_no": "2",
         "question": "Urrey",
         "I": "",
@@ -20,7 +20,7 @@ const data = [
         "next-route": "",
     },
     {
-        "id": "Mercury3",
+        "id": "mercury3",
         "question_no": "3",
         "question": "Urrey",
         "I": "",
@@ -30,7 +30,7 @@ const data = [
         "next-route": "",
     },
     {
-        "id": "Mercury4",
+        "id": "mercury4",
         "question_no": "4",
         "question": "Urrey",
         "I": "",
@@ -40,7 +40,7 @@ const data = [
         "next-route": "",
     },
     {
-        "id": "Mercury5",
+        "id": "mercury5",
         "question_no": "5",
         "question": "Urrey",
         "I": "",
@@ -50,7 +50,7 @@ const data = [
         "next-route": "",
     },
     {
-        "id": "Mercury6",
+        "id": "mercury6",
         "question_no": "6",
         "question": "Urrey",
         "I": "",
@@ -60,7 +60,7 @@ const data = [
         "next-route": "",
     },
     {
-        "id": "Mercury7",
+        "id": "mercury7",
         "question_no": "7",
         "question": "Urrey",
         "I": "",
@@ -70,7 +70,7 @@ const data = [
         "next-route": "",
     },
     {
-        "id": "Mercury8",
+        "id": "mercury8",
         "question_no": "8",
         "question": "Urrey",
         "I": "",
@@ -80,7 +80,7 @@ const data = [
         "next-route": "",
     },
     {
-        "id": "Mercury9",
+        "id": "mercury9",
         "question_no": "9",
         "question": "Urrey",
         "I": "",
@@ -90,7 +90,7 @@ const data = [
         "next-route": "",
     },
     {
-        "id": "Mercury10",
+        "id": "mercury10",
         "question_no": "10",
         "question": "Urrey",
         "I": "",
@@ -101,3 +101,5 @@ const data = [
     },
 
 ]
+
+export default { questions }
