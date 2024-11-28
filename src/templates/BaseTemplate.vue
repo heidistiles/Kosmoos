@@ -6,7 +6,7 @@
     <header>
       <nav>
         <router-link :to="{ name: 'Control' }">
-          <svg role="img" aria-label="Kosmoos Mission Control" viewBox="0 0 281.55 43.26" xmlns="http://www.w3.org/2000/svg">
+          <svg id="Kosmoos" role="img" aria-label="Kosmoos Mission Control" viewBox="0 0 281.55 43.26" xmlns="http://www.w3.org/2000/svg">
             <title>Kosmoos Mission Control</title>
             <path fill="currentColor" d="M27.46,1.73c0.21,0.51,0.28,1.07,0.19,1.66c-0.04,0.55-0.28,1.07-0.7,1.54L12.29,21.06
     c-0.38,0.38-0.38,0.79,0,1.22l14.66,16.06c0.43,0.43,0.66,0.94,0.7,1.54c0.09,0.55,0.02,1.09-0.19,1.6c-0.21,0.55-0.58,1-1.09,1.34
@@ -170,10 +170,11 @@
     align-items: center;
   }
   header {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     background-image: url("../assets/SVGs/MobilePortrait/KosmoosHeaderMobilePortrait.svg");
 
     nav {
+
       a {
         color: var(--dark-gray);
 
@@ -182,37 +183,39 @@
 
         }
 
-        svg {
-          /* SETS SIZE FOR KOSMOOS LINK */
-          width: 300px;
-          height: 50px;
+        #Kosmoos {
+          width: 33vh;
+          margin-top: 1.5rem;
         }
       }
 
     div {
       display: flex;
       justify-content: center;
+      gap: 2vh;
+      margin-top: 1.5vh;
 
       /* SETS SIZES FOR SUB PAGE LINKS */
-      svg {
-        &:nth-child(1) {
-          width: 50px;
-          height: 50px;
+      a {
+
+        svg {
+          height: 100%;
         }
 
-        &:nth-child(2) {
-          width: 50px;
-          height: 50px;
+        &:nth-of-type(1) {
+          height: 4.8vh;
         }
 
-        &:nth-child(3) {
-          width: 50px;
-          height: 50px;
+        &:nth-of-type(2) {
+          height: 7.2vh;
         }
 
-        &:nth-child(4) {
-          width: 50px;
-          height: 50px;
+        &:nth-of-type(3) {
+          height: 6.5vh;
+        }
+
+        &:nth-of-type(4) {
+          height: 4.8vh;
         }
       }
     }
@@ -224,14 +227,16 @@
     height: 17vh;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   footer {
     margin-top: 2rem;
     background-image: url("../assets/SVGs/MobilePortrait/KosmoosFooterMobilePortraitBackground.svg");
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-top: 0.75rem;
 
     .st0 {
       fill:#D9FF00;
@@ -245,7 +250,7 @@
       fill:#D9D9D9;
     }
 
-    img, svg {
+    svg {
       max-height: 12vh;
       max-width: 95vw;
     }

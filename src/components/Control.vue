@@ -2,6 +2,8 @@
 import BaseTemplate from "../templates/BaseTemplate.vue";
 import Circle from "./Circle.vue";
 import Card from "./Card.vue";
+import Dash from "./Dash.vue";
+
 document.title = 'Kosmoonaut Mission Control'
 </script>
 
@@ -27,6 +29,7 @@ document.title = 'Kosmoonaut Mission Control'
         </circle>
       </div>
       <h2>Greetings, Kosmoonaut!</h2>
+      <dash></dash>
       <h3>Choose program dfkjhgksdjfhgksdfhg ksdfhgksdjhfgs sdkfjghskdfjgh sdfgjhsdkfgh dfhgjshdglksdhfg dfsgkjhsfdkghsfd dsfghdskjfghdskjgh ghdsjkfghsdkjfgh gskdfghkjsdfg</h3>
       <router-link :to="{ name: 'ExplorationHub' }">Explore solar system</router-link>
       <router-link :to="{ name: 'ArtifactInventory' }">View mission artifacts</router-link>
@@ -36,4 +39,14 @@ document.title = 'Kosmoonaut Mission Control'
 </template>
 
 <style scoped>
+  h2 {
+    font-size: 8rem;
+    line-height: 7.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+  }
 </style>

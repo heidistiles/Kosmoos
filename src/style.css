@@ -88,15 +88,15 @@ html {
 
 .circle {
   position: absolute;
-  top: -2vh;
-  right: -2vh;
-  border: 6px solid rgb(var(--bright-green));
+  top: -3vh;
+  right: -3vh;
+  border: 0.75vh solid rgb(var(--bright-green));
   border-radius: 50%;
   background-color: rgb(var(--dark-green));
 
   &.small {
-    width: 7vh;
-    height: 7vh;
+    width: 8vh;
+    height: 8vh;
   }
 
   &.big {
