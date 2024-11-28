@@ -48,7 +48,7 @@ table {
 }
 
 * {
-  /* HEWP ME FIGUW OUT WUTS WONG */
+  box-sizing: border-box;
   /*border: 1px red solid;*/
 }
 
@@ -60,12 +60,10 @@ table {
 }
 
 :root {
-
-
-
   font-family: "Monomaniac_One", sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  font-size: 8px;
 
 
   /*color-scheme: light dark;*/
@@ -75,8 +73,8 @@ table {
   /* COLORS */
   --gray: #6F6F6F;
   --dark-gray: #313131;
-  --dark-green: #1B4613;
-  --bright-green: #D9FF00;
+  --dark-green: 27, 70, 19;
+  --bright-green: 217, 255, 0;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -85,8 +83,28 @@ table {
 }
 
 html {
-  color: var(--bright-green);
+  color: rgb(var(--bright-green));
 }
+
+.circle {
+  position: absolute;
+  top: -2vh;
+  right: -2vh;
+  border: 6px solid rgb(var(--bright-green));
+  border-radius: 50%;
+  background-color: rgb(var(--dark-green));
+
+  &.small {
+    width: 7vh;
+    height: 7vh;
+  }
+
+  &.big {
+    width: 9vh;
+    height: 9vh;
+  }
+}
+
 
 /*a {*/
 /*  font-weight: 500;*/

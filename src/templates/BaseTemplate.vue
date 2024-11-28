@@ -167,8 +167,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
   }
   header {
+    margin-bottom: 4rem;
     background-image: url("../assets/SVGs/MobilePortrait/KosmoosHeaderMobilePortrait.svg");
 
     nav {
@@ -176,7 +178,7 @@
         color: var(--dark-gray);
 
         &.router-link-active {
-          color: var(--bright-green);
+          color: rgb(var(--bright-green));
 
         }
 
@@ -225,6 +227,7 @@
   }
 
   footer {
+    margin-top: 2rem;
     background-image: url("../assets/SVGs/MobilePortrait/KosmoosFooterMobilePortraitBackground.svg");
     display: flex;
     justify-content: center;

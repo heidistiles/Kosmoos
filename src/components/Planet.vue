@@ -5,6 +5,7 @@ import {useRoute, useRouter} from 'vue-router';
 import BaseTemplate from "../templates/BaseTemplate.vue";
 
 import planetDetails from "../data_sources/PlanetDetails.js";
+import Card from "./Card.vue";
 
 const route = useRoute();
 const router = useRouter();
@@ -24,33 +25,31 @@ document.title = 'Planet Mission Data'
 
 <template>
   <base-template v-if="planet">
+    <card>
+      <h2>{{ planet.planet_name }}</h2>
+      <img :src="'../assets/' + planet_img + '.png'">
 
-    <pre> {{ planet }}</pre>
+      <h3>Caught on Camera</h3>
+      <p>{{ planet.caught_on_camera }}</p>
 
-    <h2>{{ planet.planet_name }}/10</h2>
-    <img :src="'../assets/' + planet_img + '.png'">
+      <h3>Measuring Up</h3>
+      <p>{{ planet.measuring_up }}</p>
 
-    <h3>Caught on Camera</h3>
-    <p>{{ planet.caught_on_camera }}</p>
+      <h3>Time Is of the Essence</h3>
+      <p>{{ planet.time_is_of_the_essence }}</p>
 
-    <h3>Measuring Up</h3>
-    <p>{{ planet.measuring_up }}</p>
+      <h3>Poetry in Motion</h3>
+      <p>{{ planet.poetry_in_motion }}</p>
 
-    <h3>Time Is of the Essence</h3>
-    <p>{{ planet.time_is_of_the_essence }}</p>
+      <h3>Drawn Together</h3>
+      <p>{{ planet.drawn_together }}</p>
 
-    <h3>Poetry in Motion</h3>
-    <p>{{ planet.poetry_in_motion }}</p>
+      <h3>Mission Accomplished</h3>
+      <p>{{ planet.mission_accomplished }}</p>
 
-    <h3>Drawn Together</h3>
-    <p>{{ planet.drawn_together }}</p>
-
-    <h3>Mission Accomplished</h3>
-    <p>{{ planet.mission_accomplished }}</p>
-
-    <h3>Fun Facts</h3>
-    <p>{{ planet.fun_facts }}</p>
-
+      <h3>Fun Facts</h3>
+      <p>{{ planet.fun_facts }}</p>
+    </card>
   </base-template>
 </template>
 
