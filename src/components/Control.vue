@@ -30,7 +30,7 @@ document.title = 'Kosmoonaut Mission Control'
       </div>
       <h2>Greetings, Kosmoonaut!</h2>
       <dash></dash>
-      <h3>Choose program dfkjhgksdjfhgksdfhg ksdfhgksdjhfgs sdkfjghskdfjgh sdfgjhsdkfgh dfhgjshdglksdhfg dfsgkjhsfdkghsfd dsfghdskjfghdskjgh ghdsjkfghsdkjfgh gskdfghkjsdfg</h3>
+      <h3>Choose program</h3>
       <router-link :to="{ name: 'ExplorationHub' }">Explore solar system</router-link>
       <router-link :to="{ name: 'ArtifactInventory' }">View mission artifacts</router-link>
       <router-link :to="{ name: 'Protocol' }">Search data archives</router-link>

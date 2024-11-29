@@ -1,4 +1,11 @@
 <script setup>
+import { useRoute, useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const location = useRoute();
+const currentPath = location.path;
+
 </script>
 
 <template>
@@ -126,7 +133,15 @@
     <footer>
       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
            viewBox="0 0 370.57 94" style="enable-background:new 0 0 370.57 94;" xml:space="preserve">
-        <router-link to=""><path class="st0" d="M117.78,2h135c6.63,0,12,5.37,12,12v42c0,6.63-5.37,12-12,12h-135c-6.63,0-12-5.37-12-12V14
+        <path class="st0" d="M117.78,2h135c6.63,0,12,5.37,12,12v42c0,6.63-5.37,12-12,12h-135c-6.63,0-12-5.37-12-12V14
+	C105.78,7.37,111.16,2,117.78,2z"/>
+        <router-link v-if="currentPath.includes('/challenge')" :to="{ name: 'Control'}"><path class="st1" d="M117.78,2h135c6.63,0,12,5.37,12,12v42c0,6.63-5.37,12-12,12h-135c-6.63,0-12-5.37-12-12V14
+	C105.78,7.37,111.16,2,117.78,2z"/></router-link>
+        <router-link v-if="currentPath.includes('/info')" :to="{ name: 'ExplorationHub' }"><path class="st2" d="M117.78,2h135c6.63,0,12,5.37,12,12v42c0,6.63-5.37,12-12,12h-135c-6.63,0-12-5.37-12-12V14
+	C105.78,7.37,111.16,2,117.78,2z"/></router-link>
+        <router-link v-if="currentPath.includes('/schematics')" :to="{ name: 'ArtifactInventory' }"><path class="st2" d="M117.78,2h135c6.63,0,12,5.37,12,12v42c0,6.63-5.37,12-12,12h-135c-6.63,0-12-5.37-12-12V14
+	C105.78,7.37,111.16,2,117.78,2z"/></router-link>
+        <router-link v-if="currentPath.includes('/resources')" :to="{ name: 'ResearchArchives' }"><path class="st2" d="M117.78,2h135c6.63,0,12,5.37,12,12v42c0,6.63-5.37,12-12,12h-135c-6.63,0-12-5.37-12-12V14
 	C105.78,7.37,111.16,2,117.78,2z"/></router-link>
         <path class="st1" d="M109.78,78h22c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4h-22c-2.21,0-4-1.79-4-4v-8
 	C105.78,79.79,107.57,78,109.78,78z"/>
@@ -161,6 +176,10 @@
 </template>
 
 <style scoped>
+  #testing {
+    border: 5px red solid;
+  }
+
   #fullpage {
     height: 100vh;
     background-color: darkblue;

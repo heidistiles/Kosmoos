@@ -20,7 +20,7 @@ onMounted(() => {
   }
 })
 
-document.title = 'Planet Mission Data'
+document.title = planet.planet_name + ' Mission Data'
 </script>
 
 <template>
