@@ -1,10 +1,28 @@
 <script setup>
 import { useRoute, useRouter } from 'vue-router'
+import planets from "../data_sources/PlanetDetails.js";
 
 const router = useRouter()
 
 const location = useRoute();
 const currentPath = location.path;
+
+const planetsLink = document.getElementById('planetsLink');
+
+function checkCurrentPath(currentPath) {
+  return currentPath === planets.planet_name;
+}
+
+function setLink(checkCurrentPath()) {
+  const index = planets.findIndex(checkCurrentPath(currentPath));
+  if (index < planets.length - 1) {
+    planetsLink.innerHTML;
+  } else {
+    planetsLink.innerHTML = `:to="{ name: '${planets[index + 1]}' }"`;
+  }
+}
+
+console.log(planets.findIndex(checkCurrentPath(currentPath)));
 
 </script>
 
@@ -137,7 +155,7 @@ const currentPath = location.path;
 	C105.78,7.37,111.16,2,117.78,2z"/>
         <router-link v-if="currentPath.includes('/challenge')" :to="{ name: 'Control'}"><path class="st1" d="M117.78,2h135c6.63,0,12,5.37,12,12v42c0,6.63-5.37,12-12,12h-135c-6.63,0-12-5.37-12-12V14
 	C105.78,7.37,111.16,2,117.78,2z"/></router-link>
-        <router-link v-if="currentPath.includes('/info')" :to="{ name: 'ExplorationHub' }"><path class="st2" d="M117.78,2h135c6.63,0,12,5.37,12,12v42c0,6.63-5.37,12-12,12h-135c-6.63,0-12-5.37-12-12V14
+        <router-link id="planetsLink" v-if="currentPath.includes('/info')" :to="{ name: 'ExplorationHub', params: currentPageIndex() + 1 }"><path class="st2" d="M117.78,2h135c6.63,0,12,5.37,12,12v42c0,6.63-5.37,12-12,12h-135c-6.63,0-12-5.37-12-12V14
 	C105.78,7.37,111.16,2,117.78,2z"/></router-link>
         <router-link v-if="currentPath.includes('/schematics')" :to="{ name: 'ArtifactInventory' }"><path class="st2" d="M117.78,2h135c6.63,0,12,5.37,12,12v42c0,6.63-5.37,12-12,12h-135c-6.63,0-12-5.37-12-12V14
 	C105.78,7.37,111.16,2,117.78,2z"/></router-link>
