@@ -7,7 +7,6 @@ const questions = [
         "II": "Ooo ah ah",
         "III": "Ting tang",
         "IV": "Walla walla",
-        "next-route": "Bing bang",
     },
     {
         "id": "mercury2",
@@ -17,7 +16,6 @@ const questions = [
         "II": "surrey0@cafepress.com",
         "III": "surrey0@cafepress.com",
         "IV": "surrey0@cafepress.com",
-        "next-route": "",
     },
     {
         "id": "mercury3",
@@ -27,7 +25,6 @@ const questions = [
         "II": "surrey0@cafepress.com",
         "III": "surrey0@cafepress.com",
         "IV": "surrey0@cafepress.com",
-        "next-route": "",
     },
     {
         "id": "mercury4",
@@ -37,7 +34,6 @@ const questions = [
         "II": "surrey0@cafepress.com",
         "III": "surrey0@cafepress.com",
         "IV": "surrey0@cafepress.com",
-        "next-route": "",
     },
     {
         "id": "mercury5",
@@ -47,7 +43,6 @@ const questions = [
         "II": "surrey0@cafepress.com",
         "III": "surrey0@cafepress.com",
         "IV": "surrey0@cafepress.com",
-        "next-route": "",
     },
     {
         "id": "mercury6",
@@ -57,7 +52,6 @@ const questions = [
         "II": "surrey0@cafepress.com",
         "III": "surrey0@cafepress.com",
         "IV": "surrey0@cafepress.com",
-        "next-route": "",
     },
     {
         "id": "mercury7",
@@ -67,7 +61,6 @@ const questions = [
         "II": "surrey0@cafepress.com",
         "III": "surrey0@cafepress.com",
         "IV": "surrey0@cafepress.com",
-        "next-route": "",
     },
     {
         "id": "mercury8",
@@ -77,7 +70,6 @@ const questions = [
         "II": "surrey0@cafepress.com",
         "III": "surrey0@cafepress.com",
         "IV": "surrey0@cafepress.com",
-        "next-route": "",
     },
     {
         "id": "mercury9",
@@ -87,7 +79,6 @@ const questions = [
         "II": "surrey0@cafepress.com",
         "III": "surrey0@cafepress.com",
         "IV": "surrey0@cafepress.com",
-        "next-route": "",
     },
     {
         "id": "mercury10",
@@ -97,7 +88,6 @@ const questions = [
         "II": "surrey0@cafepress.com",
         "III": "surrey0@cafepress.com",
         "IV": "surrey0@cafepress.com",
-        "next-route": "",
     },
 
 ]

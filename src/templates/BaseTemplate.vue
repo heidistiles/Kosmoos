@@ -1,28 +1,19 @@
 <script setup>
-import { useRoute, useRouter } from 'vue-router'
-import planets from "../data_sources/PlanetDetails.js";
-
-const router = useRouter()
+import { useRoute } from 'vue-router'
+import questions from "../data_sources/TestQuestions.js";``
 
 const location = useRoute();
 const currentPath = location.path;
 
-const planetsLink = document.getElementById('planetsLink');
+const nextId = questions[cleanPath(currentPath)].id;
 
-function checkCurrentPath(currentPath) {
-  return currentPath === planets.planet_name;
+function cleanPath(pathId) {
+  return pathId.replace(/[^0-9]/g, "")
 }
 
-function setLink(checkCurrentPath()) {
-  const index = planets.findIndex(checkCurrentPath(currentPath));
-  if (index < planets.length - 1) {
-    planetsLink.innerHTML;
-  } else {
-    planetsLink.innerHTML = `:to="{ name: '${planets[index + 1]}' }"`;
-  }
-}
+console.log(cleanPath(currentPath));
 
-console.log(planets.findIndex(checkCurrentPath(currentPath)));
+console.log(questions[cleanPath(currentPath)].id);
 
 </script>
 
@@ -153,9 +144,11 @@ console.log(planets.findIndex(checkCurrentPath(currentPath)));
            viewBox="0 0 370.57 94" style="enable-background:new 0 0 370.57 94;" xml:space="preserve">
         <path class="st0" d="M117.78,2h135c6.63,0,12,5.37,12,12v42c0,6.63-5.37,12-12,12h-135c-6.63,0-12-5.37-12-12V14
 	C105.78,7.37,111.16,2,117.78,2z"/>
-        <router-link v-if="currentPath.includes('/challenge')" :to="{ name: 'Control'}"><path class="st1" d="M117.78,2h135c6.63,0,12,5.37,12,12v42c0,6.63-5.37,12-12,12h-135c-6.63,0-12-5.37-12-12V14
+        <router-link v-if="currentPath.includes('/challenge' && '10')" :to="{ name: 'Results' }"><path class="st1" d="M117.78,2h135c6.63,0,12,5.37,12,12v42c0,6.63-5.37,12-12,12h-135c-6.63,0-12-5.37-12-12V14
 	C105.78,7.37,111.16,2,117.78,2z"/></router-link>
-        <router-link id="planetsLink" v-if="currentPath.includes('/info')" :to="{ name: 'ExplorationHub', params: currentPageIndex() + 1 }"><path class="st2" d="M117.78,2h135c6.63,0,12,5.37,12,12v42c0,6.63-5.37,12-12,12h-135c-6.63,0-12-5.37-12-12V14
+        <router-link v-if="currentPath.includes('/challenge') && !currentPath.includes('10')" :to="{ name: 'Planet', params: { id: nextId }}"><path class="st1" d="M117.78,2h135c6.63,0,12,5.37,12,12v42c0,6.63-5.37,12-12,12h-135c-6.63,0-12-5.37-12-12V14
+	C105.78,7.37,111.16,2,117.78,2z"/></router-link>
+        <router-link v-if="currentPath.includes('/info')" :to="{ name: 'ExplorationHub' }"><path class="st2" d="M117.78,2h135c6.63,0,12,5.37,12,12v42c0,6.63-5.37,12-12,12h-135c-6.63,0-12-5.37-12-12V14
 	C105.78,7.37,111.16,2,117.78,2z"/></router-link>
         <router-link v-if="currentPath.includes('/schematics')" :to="{ name: 'ArtifactInventory' }"><path class="st2" d="M117.78,2h135c6.63,0,12,5.37,12,12v42c0,6.63-5.37,12-12,12h-135c-6.63,0-12-5.37-12-12V14
 	C105.78,7.37,111.16,2,117.78,2z"/></router-link>
