@@ -29,30 +29,34 @@ document.title = planet.planet_name + ' Mission Data'
       <h2>{{ planet.planet_name }}</h2>
       <img :src="'../assets/' + planet_img + '.png'">
 
-      <h3>Caught on Camera</h3>
-      <p>{{ planet.caught_on_camera }}</p>
+      <section class="scrolling">
+        <h3>Caught on Camera</h3>
+        <p>{{ planet.caught_on_camera }}</p>
 
-      <h3>Measuring Up</h3>
-      <p>{{ planet.measuring_up }}</p>
+        <h3>Measuring Up</h3>
+        <p>{{ planet.measuring_up }}</p>
 
-      <h3>Time Is of the Essence</h3>
-      <p>{{ planet.time_is_of_the_essence }}</p>
+        <h3>Time Is of the Essence</h3>
+        <p>{{ planet.time_is_of_the_essence }}</p>
 
-      <h3>Poetry in Motion</h3>
-      <p>{{ planet.poetry_in_motion }}</p>
+        <h3>Poetry in Motion</h3>
+        <p>{{ planet.poetry_in_motion }}</p>
 
-      <h3>Drawn Together</h3>
-      <p>{{ planet.drawn_together }}</p>
+        <h3>Drawn Together</h3>
+        <p>{{ planet.drawn_together }}</p>
 
-      <h3>Mission Accomplished</h3>
-      <p>{{ planet.mission_accomplished }}</p>
+        <h3>Mission Accomplished</h3>
+        <p>{{ planet.mission_accomplished }}</p>
 
-      <h3>Fun Facts</h3>
-      <p>{{ planet.fun_facts }}</p>
+        <h3>Fun Facts</h3>
+        <p>{{ planet.fun_facts }}</p>
+      </section>
     </card>
   </base-template>
 </template>
 
 <style scoped>
-
+  section {
+    height: 40%;
+  }
 </style>

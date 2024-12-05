@@ -17,6 +17,26 @@
     background-color: rgba(var(--dark-green), 0.66);
     border: 0.75vh solid rgba(var(--bright-green), 0.66);
     padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  :deep(h2) {
+    font-size: clamp(5rem, 15vw, 6.4vh);
+    line-height: 100%;
+    margin-bottom: 1rem;
+  }
+
+  :deep(h3) {
+    font-size: clamp(3rem, 10vw, 4.2vh);
+    line-height: 100%;
+  }
+
+  :deep(p), :deep(a) {
+    font-size: clamp(2rem, 6.6vw, 2.8vh);
+    line-height: 100%;
+    border: 1px solid red;
   }
 
 </style>
