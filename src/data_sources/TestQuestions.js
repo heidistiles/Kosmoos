@@ -5,20 +5,22 @@ const questions = [
     {
         "id": "mercury1",
         "question_no": "1",
-        "question": "Lorem ipsum yada yada and that's all folks",
-        "I": "Ooo eee",
-        "II": "Ooo ah ah",
-        "III": "Ting tang",
-        "IV": "Walla walla",
+        "question": "If Mercury competed in the Olympics, which Athletics event would it participate in?",
+        "I": "Sprinter in 100m",
+        "II": "Runner in Marathon",
+        "III": "Jumper in Long Jump",
+        "IV": "Thrower in Discus Throw",
+        "Explanation": "Mercury has the highest orbital velocity in the solar system, so it would be in an event based on maximum speed"
     },
     {
         "id": "mercury2",
         "question_no": "2",
-        "question": "Urrey",
-        "I": "",
-        "II": "surrey0@cafepress.com",
-        "III": "surrey0@cafepress.com",
-        "IV": "surrey0@cafepress.com",
+        "question": "If you could live on Mercury, which would happen more frequently: your bedtime or your birthday?",
+        "I": "Birthday",
+        "II": "Bedtime",
+        "III": "They would be equally frequent",
+        "IV": "Neither would ever happen",
+        "Explanation": "While Mercury rotates three times for every two orbits, because it moves so fast it takes about two years for the sun to reach the same place in the sky"
     },
     {
         "id": "mercury3",
