@@ -8,7 +8,7 @@ import Exploration from "./components/Exploration.vue";
 import Inventory from "./components/Inventory.vue";
 import Planet from "./components/Planet.vue";
 import Protocol from "./components/Protocol.vue";
-import Resources from "./components/Resources.vue";
+// import Resources from "./components/Resources.vue";
 import Results from "./components/Results.vue";
 
 const router = createRouter({
@@ -93,29 +93,29 @@ const router = createRouter({
                 },
 
                 //Research Info
-                {
-                    path: '/resources',
-                    name: 'ResearchResources',
-                    component: Resources,
-                    children: [
-                        {
-                            path: '/books',
-                            name: 'Books'
-                        },
-                        {
-                            path: '/videos',
-                            name: 'Videos'
-                        },
-                        {
-                            path: '/websites',
-                            name: 'Websites'
-                        },
-                        {
-                            path: '/locations',
-                            name: 'Locations'
-                        }
-                    ]
-                }
+                // {
+                //     path: '/resources',
+                //     name: 'ResearchResources',
+                //     component: Resources,
+                //     children: [
+                //         {
+                //             path: '/books',
+                //             name: 'Books'
+                //         },
+                //         {
+                //             path: '/videos',
+                //             name: 'Videos'
+                //         },
+                //         {
+                //             path: '/websites',
+                //             name: 'Websites'
+                //         },
+                //         {
+                //             path: '/locations',
+                //             name: 'Locations'
+                //         }
+                //     ]
+                // }
             ]
         },
 
