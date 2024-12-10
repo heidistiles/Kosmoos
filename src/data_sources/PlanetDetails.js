@@ -1,4 +1,4 @@
-const planets = [
+const data = [
     {
         "id": "mercury",
         "planet_name": "Mercury",
@@ -97,4 +97,4 @@ const planets = [
     }
 ]
 
-export default { planets }
+export default { data }

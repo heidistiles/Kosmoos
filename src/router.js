@@ -8,7 +8,7 @@ import Exploration from "./components/Exploration.vue";
 import Inventory from "./components/Inventory.vue";
 import Planet from "./components/Planet.vue";
 import Protocol from "./components/Protocol.vue";
-// import Resources from "./components/Resources.vue";
+import Resources from "./components/Resources.vue";
 import Results from "./components/Results.vue";
 
 const router = createRouter({
@@ -74,7 +74,7 @@ const router = createRouter({
 
                 //Achievement Info
                 {
-                    path: '/schematics/:artifactId',
+                    path: 'schematics/:artifactId',
                     name: 'Artifact',
                     component: Artifact
                 },
@@ -92,30 +92,12 @@ const router = createRouter({
                     component: Archives
                 },
 
-                //Research Info
-                // {
-                //     path: '/resources',
-                //     name: 'ResearchResources',
-                //     component: Resources,
-                //     children: [
-                //         {
-                //             path: '/books',
-                //             name: 'Books'
-                //         },
-                //         {
-                //             path: '/videos',
-                //             name: 'Videos'
-                //         },
-                //         {
-                //             path: '/websites',
-                //             name: 'Websites'
-                //         },
-                //         {
-                //             path: '/locations',
-                //             name: 'Locations'
-                //         }
-                //     ]
-                // }
+                // Research Info
+                {
+                    path: 'resources/:type',
+                    name: 'ResearchResources',
+                    component: Resources,
+                }
             ]
         },
 

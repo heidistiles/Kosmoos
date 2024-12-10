@@ -8,6 +8,7 @@ import Card from "./Card.vue";
 const route = useRoute();
 const router = useRouter();
 const parameter = route.params.artifactId;
+console.log(typeof artifactSchematics.data);
 const artifact = artifactSchematics.data.filter(artifact => artifact.id === parameter)[0]
 
 onMounted(() => {
@@ -18,7 +19,7 @@ onMounted(() => {
   }
 })
 
-document.title = 'Artifact Name Schematics'
+document.title = artifact.artifact_name + ' Schematics'
 </script>
 
 <template>

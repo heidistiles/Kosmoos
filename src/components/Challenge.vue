@@ -1,5 +1,5 @@
 <script setup>
-import {onMounted, watch} from "vue";
+import {onMounted} from "vue";
 import {useRoute, useRouter} from 'vue-router';
 
 import BaseTemplate from "../templates/BaseTemplate.vue";
@@ -11,13 +11,6 @@ const route = useRoute();
 const router = useRouter();
 const parameter = route.params.questionId;
 const question = testQuestions.questions.filter(question => question.id === parameter)[0]
-
-// watch(
-//     () => parameter,
-//     () => {
-//       window.location.reload()
-//     }
-// )
 
 onMounted(() => {
   if (!question) {

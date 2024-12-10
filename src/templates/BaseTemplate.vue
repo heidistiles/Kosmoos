@@ -2,8 +2,8 @@
 import { useRoute } from 'vue-router'
 import questionsData from "../data_sources/TestQuestions.js";``
 
-let location = useRoute();
-let currentPath = location.path;
+const location = useRoute();
+const currentPath = location.path;
 
 function cleanPath(pathToClean) {
   return parseInt(pathToClean.replace(/[^0-9]/g, ""))
@@ -29,15 +29,7 @@ function getId(currentPath) {
   }
 }
 
-let nextId = getId(currentPath);
-
-// watch(
-//     () => route.params.level,
-//     (newId, oldId) => {
-//       level = newId;
-//       window.location.reload()
-//     }
-// )
+const nextId = getId(currentPath);
 
 </script>
 
@@ -322,8 +314,6 @@ let nextId = getId(currentPath);
       L249.6,18L249.6,18z"/>
         </router-link>
       </svg>
-
-      <!--      <img src="../assets/SVGs/MobilePortrait/KosmoosFooterMobilePortrait.svg" alt="">-->
     </footer>
   </div>
 </template>

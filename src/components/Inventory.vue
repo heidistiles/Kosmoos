@@ -11,7 +11,7 @@ document.title = 'Artifact Inventory Log'
   <base-template>
     <card>
       Testing Testing 123
-      <router-link :to="{ path: '/schematics/gravity-speeder' }">Link to gravity speeder</router-link>
+      <router-link :to="{ path: 'artifact-inventory/schematics/gravity-speeder' }">Link to gravity speeder</router-link>
     </card>
   </base-template>
 </template>

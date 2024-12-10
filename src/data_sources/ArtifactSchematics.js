@@ -55,6 +55,6 @@ const data = [
         "planet_symbol": "",
         "description": "surrey0@cafepress.com"
     },
-];
+]
 
-export default data;
+export default { data }
