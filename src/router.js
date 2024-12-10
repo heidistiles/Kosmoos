@@ -94,10 +94,28 @@ const router = createRouter({
 
                 //Research Info
                 {
-                    path: '/resources/books',
+                    path: '/resources',
                     name: 'ResearchResources',
-                    component: Resources
-                },
+                    component: Resources,
+                    children: [
+                        {
+                            path: '/books',
+                            name: 'Books'
+                        },
+                        {
+                            path: '/videos',
+                            name: 'Videos'
+                        },
+                        {
+                            path: '/websites',
+                            name: 'Websites'
+                        },
+                        {
+                            path: '/locations',
+                            name: 'Locations'
+                        }
+                    ]
+                }
             ]
         },
 

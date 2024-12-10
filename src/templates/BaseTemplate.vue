@@ -2,8 +2,8 @@
 import { useRoute } from 'vue-router'
 import questionsData from "../data_sources/TestQuestions.js";``
 
-const location = useRoute();
-const currentPath = location.path;
+let location = useRoute();
+let currentPath = location.path;
 
 function cleanPath(pathToClean) {
   return parseInt(pathToClean.replace(/[^0-9]/g, ""))
@@ -29,9 +29,15 @@ function getId(currentPath) {
   }
 }
 
-const nextId = getId(currentPath);
+let nextId = getId(currentPath);
 
-console.log(nextId);
+// watch(
+//     () => route.params.level,
+//     (newId, oldId) => {
+//       level = newId;
+//       window.location.reload()
+//     }
+// )
 
 </script>
 

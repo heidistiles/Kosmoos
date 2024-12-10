@@ -16,16 +16,19 @@
     border-radius: 20px;
     background-color: rgba(var(--dark-green), 0.66);
     border: 0.75vh solid rgba(var(--bright-green), 0.66);
-    padding: 2rem 3rem;
+    padding: 2rem 3rem 3rem 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
+  :deep(*) {
+    //border: 1px red solid;
+  }
+
   :deep(h2) {
     font-size: clamp(5rem, 15vw, 6.4vh);
     line-height: 100%;
-    margin-bottom: 1rem;
   }
 
   :deep(h3) {
@@ -36,7 +39,14 @@
   :deep(p), :deep(a) {
     font-size: clamp(2rem, 6.6vw, 2.8vh);
     line-height: 100%;
-    border: 1px solid red;
+    //border: 1px solid red;
+  }
+
+  :deep(.buttons) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
   }
 
 </style>

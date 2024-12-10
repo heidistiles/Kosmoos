@@ -3,6 +3,7 @@ import BaseTemplate from "../templates/BaseTemplate.vue";
 import Circle from "./Circle.vue";
 import Card from "./Card.vue";
 import Dash from "./Dash.vue";
+import Box from "./Box.vue";
 
 document.title = 'Kosmoonaut Mission Control'
 </script>
@@ -30,12 +31,24 @@ document.title = 'Kosmoonaut Mission Control'
           </circle>
         </router-link>
       </div>
-      <h2>Greetings, Kosmoonaut!</h2>
-      <dash></dash>
-      <h3>Choose program</h3>
-      <router-link :to="{ name: 'ExplorationHub' }">Explore solar system</router-link>
-      <router-link :to="{ name: 'ArtifactInventory' }">View mission artifacts</router-link>
-      <router-link :to="{ name: 'Protocol' }">Search data archives</router-link>
+
+      <div>
+        <h2>Greetings, Kosmoonaut!</h2>
+        <dash></dash>
+        <h3>Choose program</h3>
+      </div>
+
+      <div class="buttons">
+        <router-link :to="{ name: 'ExplorationHub' }">
+          <box><p>Explore solar system</p></box>
+        </router-link>
+        <router-link :to="{ name: 'ArtifactInventory' }">
+          <box>View mission artifacts</box>
+        </router-link>
+        <router-link :to="{ name: 'Protocol' }">
+          <box>Search data archives</box>
+        </router-link>
+      </div>
     </card>
   </base-template>
 </template>

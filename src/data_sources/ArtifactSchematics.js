@@ -42,8 +42,8 @@ const data = [
         "description": "surrey0@cafepress.com"
     },
     {
-        "id": "astral-rotor",
-        "artifact_name": "Astral Rotor",
+        "id": "astral-looper",
+        "artifact_name": "Astral Looper",
         "artifact_gif": "Urrey",
         "planet_symbol": "",
         "description": "surrey0@cafepress.com"
@@ -55,4 +55,6 @@ const data = [
         "planet_symbol": "",
         "description": "surrey0@cafepress.com"
     },
-]
+];
+
+export default data;

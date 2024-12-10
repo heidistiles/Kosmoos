@@ -7,20 +7,7 @@ import BaseTemplate from "../templates/BaseTemplate.vue";
 import planetDetails from "../data_sources/PlanetDetails.js";
 import Card from "./Card.vue";
 
-const route = useRoute();
-const router = useRouter();
-const parameter = route.params.planetName;
-const planet = planetDetails.planets.filter(planet => planet.id === parameter)[0]
-
-onMounted(() => {
-  if (!planet) {
-    router.push({
-      name: 'Control'
-    })
-  }
-})
-
-document.title = planet.planet_name + ' Mission Data'
+document.title = planetDetails.planets.planet_name + ' Mission Data'
 </script>
 
 <template>
