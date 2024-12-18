@@ -1,12 +1,18 @@
 <script setup>
-import { useRoute } from 'vue-router'
-import questionsData from "../data_sources/TestQuestions.js";``
+import {useRoute} from 'vue-router'
+import questionsData from "../data_sources/TestQuestions.js";
 
 const location = useRoute();
 const currentPath = location.path;
 
+function hasNumbers(str) {
+  return /\d/.test(str)
+}
+
 function cleanPath(pathToClean) {
-  return parseInt(pathToClean.replace(/[^0-9]/g, ""))
+  if (hasNumbers(pathToClean)) {
+    return parseInt(pathToClean.replace(/[^0-9]/g, ""))
+  }
 }
 
 function getId(currentPath) {
@@ -29,8 +35,6 @@ function getId(currentPath) {
   }
 }
 
-const nextId = getId(currentPath);
-
 </script>
 
 <template>
@@ -38,7 +42,8 @@ const nextId = getId(currentPath);
     <header>
       <nav>
         <router-link :to="{ name: 'Control' }">
-          <svg id="Kosmoos" role="img" aria-label="Kosmoos Mission Control" viewBox="0 0 281.55 43.26" xmlns="http://www.w3.org/2000/svg">
+          <svg id="Kosmoos" role="img" aria-label="Kosmoos Mission Control" viewBox="0 0 281.55 43.26"
+               xmlns="http://www.w3.org/2000/svg">
             <title>Kosmoos Mission Control</title>
             <path fill="currentColor" d="M27.46,1.73c0.21,0.51,0.28,1.07,0.19,1.66c-0.04,0.55-0.28,1.07-0.7,1.54L12.29,21.06
     c-0.38,0.38-0.38,0.79,0,1.22l14.66,16.06c0.43,0.43,0.66,0.94,0.7,1.54c0.09,0.55,0.02,1.09-0.19,1.6c-0.21,0.55-0.58,1-1.09,1.34
@@ -132,7 +137,7 @@ const nextId = getId(currentPath);
           <router-link :to="{ name: 'Protocol' }">
             <svg viewBox="0 0 41 41" xmlns="http://www.w3.org/2000/svg">
               <g>
-                  <path fill="currentColor" d="M26.36,10.29c-0.66-0.4-1.39-0.59-2.18-0.59h-6.34c-0.79,0-1.53,0.2-2.21,0.59c-0.66,0.4-1.19,0.92-1.58,1.58
+                <path fill="currentColor" d="M26.36,10.29c-0.66-0.4-1.39-0.59-2.18-0.59h-6.34c-0.79,0-1.53,0.2-2.21,0.59c-0.66,0.4-1.19,0.92-1.58,1.58
                     c-0.4,0.66-0.59,1.39-0.59,2.18v2.41c0,0.42,0.14,0.77,0.43,1.06c0.31,0.26,0.67,0.4,1.09,0.4h0.92c0.4,0,0.74-0.13,1.02-0.4
                     c0.31-0.29,0.46-0.64,0.46-1.06v-2.41c0-0.11,0.04-0.21,0.13-0.3c0.11-0.11,0.22-0.16,0.33-0.16h6.34c0.11,0,0.21,0.05,0.3,0.16
                     c0.09,0.09,0.13,0.19,0.13,0.3v3c0,0.26-0.11,0.43-0.33,0.49l-2.54,0.96c-0.77,0.29-1.42,0.79-1.95,1.52
@@ -140,11 +145,11 @@ const nextId = getId(currentPath);
                     c0.31-0.29,0.46-0.64,0.46-1.06v-1.98c0,0,0.02-0.07,0.07-0.2c0.07-0.07,0.12-0.1,0.17-0.1l2.47-0.96
                     c0.86-0.31,1.55-0.84,2.08-1.58c0.53-0.77,0.79-1.62,0.79-2.54v-3c0-0.79-0.2-1.52-0.59-2.18C27.55,11.21,27.02,10.68,26.36,10.29z
                     "/>
-                  <path fill="currentColor" d="M21.02,27.05c-0.68,0-1.28,0.24-1.78,0.73c-0.48,0.48-0.73,1.07-0.73,1.75s0.24,1.27,0.73,1.75
+                <path fill="currentColor" d="M21.02,27.05c-0.68,0-1.28,0.24-1.78,0.73c-0.48,0.48-0.73,1.07-0.73,1.75s0.24,1.27,0.73,1.75
                     c0.51,0.48,1.1,0.73,1.78,0.73s1.27-0.24,1.75-0.73s0.73-1.07,0.73-1.75s-0.24-1.26-0.73-1.75S21.7,27.05,21.02,27.05z"/>
-                  <path fill="currentColor" d="M20.5,0C9.2,0,0,9.2,0,20.5S9.2,41,20.5,41C31.8,41,41,31.8,41,20.5S31.8,0,20.5,0z M20.5,37
+                <path fill="currentColor" d="M20.5,0C9.2,0,0,9.2,0,20.5S9.2,41,20.5,41C31.8,41,41,31.8,41,20.5S31.8,0,20.5,0z M20.5,37
                     C11.4,37,4,29.6,4,20.5C4,11.4,11.4,4,20.5,4S37,11.4,37,20.5C37,29.6,29.6,37,20.5,37z"/>
-                </g>
+              </g>
             </svg>
           </router-link>
         </div>
@@ -157,27 +162,32 @@ const nextId = getId(currentPath);
 
     <footer>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370.6 94">
-          <path class="st0" d="M117.8,2h135c6.6,0,12,5.4,12,12v42c0,6.6-5.4,12-12,12h-135c-6.6,0-12-5.4-12-12V14C105.8,7.4,111.2,2,117.8,2
+        <path class="st0" d="M117.8,2h135c6.6,0,12,5.4,12,12v42c0,6.6-5.4,12-12,12h-135c-6.6,0-12-5.4-12-12V14C105.8,7.4,111.2,2,117.8,2
       z"/>
-          <path class="st1" d="M109.8,78h22c2.2,0,4,1.8,4,4v8c0,2.2-1.8,4-4,4h-22c-2.2,0-4-1.8-4-4v-8C105.8,79.8,107.6,78,109.8,78z"/>
-          <path class="st1" d="M146.8,78h22c2.2,0,4,1.8,4,4v8c0,2.2-1.8,4-4,4h-22c-2.2,0-4-1.8-4-4v-8C142.8,79.8,144.6,78,146.8,78z"/>
-          <circle class="st1" cx="256.8" cy="86" r="8"/>
-          <circle class="st1" cx="235.8" cy="86" r="8"/>
-          <circle class="st1" cx="214.8" cy="86" r="8"/>
-          <circle class="st2" cx="310.8" cy="71.5" r="22"/>
-          <circle class="st2" cx="348.6" cy="37.3" r="22"/>
-          <circle class="st2" cx="299.5" cy="21.7" r="22"/>
-          <path class="st1" d="M303.8,20.6c0,3-1.8,5.4-4,5.4s-4-2.4-4-5.4s2.9-17.6,4-17.6S303.8,17.6,303.8,20.6z"/>
-          <path class="st1" d="M344.9,40c-1.7-2.4-1.7-5.4,0.1-6.7c1.8-1.3,4.6-0.4,6.4,2c1.7,2.4,8,16,7.1,16.6
+        <path class="st1"
+              d="M109.8,78h22c2.2,0,4,1.8,4,4v8c0,2.2-1.8,4-4,4h-22c-2.2,0-4-1.8-4-4v-8C105.8,79.8,107.6,78,109.8,78z"/>
+        <path class="st1"
+              d="M146.8,78h22c2.2,0,4,1.8,4,4v8c0,2.2-1.8,4-4,4h-22c-2.2,0-4-1.8-4-4v-8C142.8,79.8,144.6,78,146.8,78z"/>
+        <circle class="st1" cx="256.8" cy="86" r="8"/>
+        <circle class="st1" cx="235.8" cy="86" r="8"/>
+        <circle class="st1" cx="214.8" cy="86" r="8"/>
+        <circle class="st2" cx="310.8" cy="71.5" r="22"/>
+        <circle class="st2" cx="348.6" cy="37.3" r="22"/>
+        <circle class="st2" cx="299.5" cy="21.7" r="22"/>
+        <path class="st1" d="M303.8,20.6c0,3-1.8,5.4-4,5.4s-4-2.4-4-5.4s2.9-17.6,4-17.6S303.8,17.6,303.8,20.6z"/>
+        <path class="st1" d="M344.9,40c-1.7-2.4-1.7-5.4,0.1-6.7c1.8-1.3,4.6-0.4,6.4,2c1.7,2.4,8,16,7.1,16.6
       C357.6,52.6,346.7,42.5,344.9,40z"/>
-          <path class="st1" d="M308.7,68.3c2.7-1.3,5.6-0.7,6.6,1.3c1,2-0.5,4.7-3.1,5.9c-2.7,1.3-17.2,4.9-17.6,3.9
+        <path class="st1" d="M308.7,68.3c2.7-1.3,5.6-0.7,6.6,1.3c1,2-0.5,4.7-3.1,5.9c-2.7,1.3-17.2,4.9-17.6,3.9
       C294,78.5,306,69.6,308.7,68.3z"/>
-          <rect x="17.8" y="16" class="st1" width="6" height="78"/>
-          <rect x="45.8" y="6" class="st1" width="6" height="88"/>
-          <rect x="73.8" class="st1" width="6" height="94"/>
-          <path class="st2" d="M10.8,28h20c1.7,0,3,1.3,3,3v4c0,1.7-1.3,3-3,3h-20c-1.7,0-3-1.3-3-3v-4C7.8,29.3,9.1,28,10.8,28z"/>
-          <path class="st2" d="M38.8,71h20c1.7,0,3,1.3,3,3v4c0,1.7-1.3,3-3,3h-20c-1.7,0-3-1.3-3-3v-4C35.8,72.3,37.1,71,38.8,71z"/>
-          <path class="st2" d="M66.8,46h20c1.7,0,3,1.3,3,3v4c0,1.7-1.3,3-3,3h-20c-1.7,0-3-1.3-3-3v-4C63.8,47.3,65.1,46,66.8,46z"/>
+        <rect x="17.8" y="16" class="st1" width="6" height="78"/>
+        <rect x="45.8" y="6" class="st1" width="6" height="88"/>
+        <rect x="73.8" class="st1" width="6" height="94"/>
+        <path class="st2"
+              d="M10.8,28h20c1.7,0,3,1.3,3,3v4c0,1.7-1.3,3-3,3h-20c-1.7,0-3-1.3-3-3v-4C7.8,29.3,9.1,28,10.8,28z"/>
+        <path class="st2"
+              d="M38.8,71h20c1.7,0,3,1.3,3,3v4c0,1.7-1.3,3-3,3h-20c-1.7,0-3-1.3-3-3v-4C35.8,72.3,37.1,71,38.8,71z"/>
+        <path class="st2"
+              d="M66.8,46h20c1.7,0,3,1.3,3,3v4c0,1.7-1.3,3-3,3h-20c-1.7,0-3-1.3-3-3v-4C63.8,47.3,65.1,46,66.8,46z"/>
         <polygon id="wave" class="st3" points="224,63.7 212.6,26.2 207.9,40.4 164.6,40.4 159.2,31.2 146,52.6 135,30.6 129.4,39.5 105.8,39.5
       105.8,33.5 126.1,33.5 135.6,18.3 146.6,40.3 159.4,19.5 168,34.4 203.6,34.4 212.9,6.3 224.5,44.8 228.7,33.5 264.8,33.5
       264.8,39.5 232.9,39.5 "/>
@@ -291,7 +301,9 @@ const nextId = getId(currentPath);
         </router-link>
 
         <!-- next link for in-progress challenge questions -->
-        <router-link id="nextQuestionLink" v-if="currentPath.includes('/challenge') && !currentPath.includes('10') && !currentPath.includes('results')" :to="{ path: nextId }">
+        <router-link id="nextQuestionLink"
+                     v-if="currentPath.includes('/challenge') && !currentPath.includes('10') && !currentPath.includes('results')"
+                     :to="{ path: getId(currentPath) }">
           <path class="st0" d="M117.8,2h135c6.6,0,12,5.4,12,12v42c0,6.6-5.4,12-12,12h-135c-6.6,0-12-5.4-12-12V14C105.8,7.4,111.2,2,117.8,2
       z"/>
           <path id="nextQuestion" class="st3" d="M150.2,53.7c0,0.8-0.3,1.5-0.9,2.1c-0.6,0.5-1.2,0.8-2.1,0.8h-1.9c-1.1,0-2-0.5-2.6-1.5l-13.6-23.6
@@ -319,84 +331,92 @@ const nextId = getId(currentPath);
 </template>
 
 <style scoped>
-  #testing {
-    border: 5px red solid;
+#testing {
+  border: 5px red solid;
+}
+
+#fullpage {
+  height: 100vh;
+  background-color: darkblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  margin-bottom: 2rem;
+  background-image: url("../assets/SVGs/MobilePortrait/KosmoosHeaderMobilePortrait.svg");
+
+  /* hover color changing shenanigans*/
+
+  &:has(#Kosmoos:hover) {
+    #Kosmoos {
+      color: rgb(var(--bright-green));
+    }
+
+    nav div a {
+      color: var(--dark-gray);
+    }
   }
 
-  #fullpage {
-    height: 100vh;
-    background-color: darkblue;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-  header {
-    margin-bottom: 2rem;
-    background-image: url("../assets/SVGs/MobilePortrait/KosmoosHeaderMobilePortrait.svg");
+  &:has(nav div a:nth-of-type(1):hover) {
+    nav div a:nth-of-type(1) {
+      color: rgb(var(--bright-green));
+    }
 
-    /* hover color changing shenanigans*/
-    &:has(#Kosmoos:hover) {
+    :is(#Kosmoos, nav div a:is(:nth-of-type(2), :nth-of-type(3), :nth-of-type(4))) {
+      color: var(--dark-gray);
+    }
+  }
+
+  &:has(nav div a:nth-of-type(2):hover) {
+    nav div a:nth-of-type(2) {
+      color: rgb(var(--bright-green));
+    }
+
+    :is(#Kosmoos, nav div a:is(:nth-of-type(1), :nth-of-type(3), :nth-of-type(4))) {
+      color: var(--dark-gray);
+    }
+  }
+
+  &:has(nav div a:nth-of-type(3):hover) {
+    nav div a:nth-of-type(3) {
+      color: rgb(var(--bright-green));
+    }
+
+    :is(#Kosmoos, nav div a:is(:nth-of-type(1), :nth-of-type(2), :nth-of-type(4))) {
+      color: var(--dark-gray);
+    }
+  }
+
+  &:has(nav div a:nth-of-type(4):hover) {
+    nav div a:nth-of-type(4) {
+      color: rgb(var(--bright-green));
+    }
+
+    :is(#Kosmoos, nav div a:is(:nth-of-type(1), :nth-of-type(2), :nth-of-type(3))) {
+      color: var(--dark-gray);
+    }
+  }
+
+  /* end of hover color changing shenanigans*/
+
+  nav {
+
+    a {
+      color: var(--dark-gray);
+
+      &.router-link-active {
+        color: rgb(var(--bright-green));
+
+      }
+
       #Kosmoos {
-        color: rgb(var(--bright-green));
-      }
-      nav div a {
-        color: var(--dark-gray);
+        width: 33vh;
+        margin-top: 1.5rem;
       }
     }
-
-    &:has(nav div a:nth-of-type(1):hover) {
-      nav div a:nth-of-type(1) {
-        color: rgb(var(--bright-green));
-      }
-      :is(#Kosmoos, nav div a:is(:nth-of-type(2), :nth-of-type(3), :nth-of-type(4))) {
-        color: var(--dark-gray);
-      }
-    }
-
-    &:has(nav div a:nth-of-type(2):hover) {
-      nav div a:nth-of-type(2) {
-        color: rgb(var(--bright-green));
-      }
-      :is(#Kosmoos, nav div a:is(:nth-of-type(1), :nth-of-type(3), :nth-of-type(4))) {
-        color: var(--dark-gray);
-      }
-    }
-
-    &:has(nav div a:nth-of-type(3):hover) {
-      nav div a:nth-of-type(3) {
-        color: rgb(var(--bright-green));
-      }
-      :is(#Kosmoos, nav div a:is(:nth-of-type(1), :nth-of-type(2), :nth-of-type(4))) {
-        color: var(--dark-gray);
-      }
-    }
-
-    &:has(nav div a:nth-of-type(4):hover) {
-      nav div a:nth-of-type(4) {
-        color: rgb(var(--bright-green));
-      }
-      :is(#Kosmoos, nav div a:is(:nth-of-type(1), :nth-of-type(2), :nth-of-type(3))) {
-        color: var(--dark-gray);
-      }
-    }
-    /* end of hover color changing shenanigans*/
-
-    nav {
-
-      a {
-        color: var(--dark-gray);
-
-        &.router-link-active {
-          color: rgb(var(--bright-green));
-
-        }
-
-        #Kosmoos {
-          width: 33vh;
-          margin-top: 1.5rem;
-        }
-      }
 
     div {
       display: flex;
@@ -406,6 +426,7 @@ const nextId = getId(currentPath);
       //margin-top: 1.5vh;
 
       /* SETS SIZES FOR SUB PAGE LINKS */
+
       a {
         box-sizing: content-box;
         padding: 1.5vh 1vh 0 1vh;
@@ -432,43 +453,43 @@ const nextId = getId(currentPath);
       }
     }
   }
+}
+
+header, footer {
+  width: 100%;
+  height: 17vh;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  margin-top: 2rem;
+  background-image: url("../assets/SVGs/MobilePortrait/KosmoosFooterMobilePortraitBackground.svg");
+  padding-top: 0.75rem;
+
+  .st0 {
+    fill: #D9FF00;
   }
 
-  header, footer {
-    width: 100%;
-    height: 17vh;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .st1 {
+    fill: #313131;
   }
 
-  footer {
-    margin-top: 2rem;
-    background-image: url("../assets/SVGs/MobilePortrait/KosmoosFooterMobilePortraitBackground.svg");
-    padding-top: 0.75rem;
-
-    .st0 {
-      fill:#D9FF00;
-    }
-
-    .st1 {
-      fill:#313131;
-    }
-
-    .st2 {
-      fill:#D9D9D9;
-    }
-
-    .st3 {
-      fill:#1B4613;
-    }
-
-    svg {
-      max-height: 12vh;
-      max-width: 95vw;
-    }
+  .st2 {
+    fill: #D9D9D9;
   }
+
+  .st3 {
+    fill: #1B4613;
+  }
+
+  svg {
+    max-height: 12vh;
+    max-width: 95vw;
+  }
+}
 </style>

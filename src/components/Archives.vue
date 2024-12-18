@@ -9,16 +9,16 @@ document.title = 'Research Resource Archives'
 <template>
   <base-template>
     <card>
-      <router-link :to="{ path: '/resources/books', params: { type: 'book' } }">
+      <router-link :to="{ path: '/resources/books', params: { type: 'books' } }">
         <box>Books</box>
       </router-link>
-      <router-link :to="{ name: '/resources/videos', params: { type: 'video' } }">
+      <router-link :to="{ name: '/resources/videos', params: { type: 'videos' } }">
         <box>Videos</box>
       </router-link>
-      <router-link :to="{ path: '/resources/websites', params: { type: 'website' } }">
+      <router-link :to="{ path: '/resources/websites', params: { type: 'websites' } }">
         <box>Websites</box>
       </router-link>
-      <router-link :to="{ name: '/resources/locations', params: { type: 'location' } }">
+      <router-link :to="{ name: '/resources/locations', params: { type: 'locations' } }">
         <box>Locations</box>
       </router-link>
     </card>

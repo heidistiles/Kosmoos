@@ -12,6 +12,13 @@
   div {
     border: 4px solid rgb(var(--bright-green));
     border-radius: 15px;
-    padding: 1.75rem 2.25rem 2.25rem 2.25rem;
+    padding: 0.5rem 1.25rem 1.25rem 1.25rem;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: rgb(var(--bright-green));
+      color: rgb(var(--dark-green));
+    }
   }
 </style>

@@ -40,13 +40,13 @@ document.title = 'Kosmoonaut Mission Control'
 
       <div class="buttons">
         <router-link :to="{ name: 'ExplorationHub' }">
-          <box><p>Explore solar system</p></box>
+          <box><h4>Explore solar system</h4></box>
         </router-link>
         <router-link :to="{ name: 'ArtifactInventory' }">
-          <box>View mission artifacts</box>
+          <box><h4>View mission artifacts</h4></box>
         </router-link>
         <router-link :to="{ name: 'Protocol' }">
-          <box>Search data archives</box>
+          <box><h4>Search data archives</h4></box>
         </router-link>
       </div>
     </card>

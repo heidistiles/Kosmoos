@@ -3,13 +3,13 @@
 </script>
 
 <template>
-  <div>
+  <article>
     <slot></slot>
-  </div>
+  </article>
 </template>
 
 <style scoped>
-  div {
+  article {
     position: relative;
     width: clamp(30rem, 90vw, 40vh);
     height: clamp(45rem, 135vw, 60vh);
@@ -36,6 +36,11 @@
     line-height: 100%;
   }
 
+  :deep(h4) {
+    font-size: clamp(2.5rem, 8.8vw, 3.5vh);
+    line-height: 100%;
+  }
+
   :deep(p), :deep(a) {
     font-size: clamp(2rem, 6.6vw, 2.8vh);
     line-height: 100%;
@@ -47,6 +52,8 @@
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
+    align-items: stretch;
+    background-color: red;
   }
 
 </style>

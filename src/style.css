@@ -89,9 +89,6 @@ html {
 html a {
   color: rgb(var(--bright-green));
   text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
 }
 
 .circle {
@@ -114,7 +111,8 @@ html a {
 }
 
 .scrolling {
-  overflow: scroll;
+  overflow-y: scroll;
+  scrollbar-color: rgba(var(--bright-green), 1) rgb(var(--dark-green), 0);
 }
 
 

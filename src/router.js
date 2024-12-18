@@ -94,7 +94,7 @@ const router = createRouter({
 
                 // Research Info
                 {
-                    path: 'resources/:type',
+                    path: 'resources/:resourceType',
                     name: 'ResearchResources',
                     component: Resources,
                 }
