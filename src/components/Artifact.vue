@@ -32,9 +32,11 @@ document.title = artifact.artifact_name + ' Schematics'
       </div>
 
       <h2>{{ artifact.artifact_name }}</h2>
-      <img :src="'../assets/' + artifact.artifact_gif + '.gif'" alt=""/>
+      <img class="mobile" :src="'../assets/' + artifact.artifact_gif + '.gif'" alt=""/>
 
       <section class="scrolling">
+        <img class="desktop" :src="'../assets/' + artifact.artifact_gif + '.gif'" alt=""/>
+
         <h3>Ancient Lore</h3>
         <p>{{ artifact.ancient_lore }}</p>
 
@@ -88,7 +90,7 @@ document.title = artifact.artifact_name + ' Schematics'
     h3 {
       padding-top: 2rem;
 
-      &:nth-child(1) {
+      &:nth-of-type(1) {
         padding-top: 0;
       }
     }
@@ -96,5 +98,21 @@ document.title = artifact.artifact_name + ' Schematics'
     p {
       padding-top: 0.75rem;
     }
+  }
+
+  @media (min-width: 1040px) {
+    section {
+      display: block;
+    }
+
+    img {
+      width: 50%;
+      height: 67% !important;
+      shape-outside: margin-box;
+      float: left;
+      padding: 0;
+      margin: 1rem 2.5rem 0.5rem 0;
+    }
+
   }
 </style>

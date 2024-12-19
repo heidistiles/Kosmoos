@@ -1,6 +1,6 @@
 const data = [
     {
-        "id": "",
+        "id": "mercury",
         "planet_name": "Mercury",
         "planet_img": "Urrey",
         "planet_type_symbol": "surrey0@cafepress.com",
@@ -13,7 +13,7 @@ const data = [
         "defense": "Iron core defense"
     },
     {
-        "id": "",
+        "id": "venus",
         "planet_name": "Venus",
         "planet_img": "Urrey",
         "planet_type_symbol": "surrey0@cafepress.com",
@@ -26,7 +26,7 @@ const data = [
         "defense": "Smoke screen defense"
     },
     {
-        "id": "",
+        "id": "earth",
         "planet_name": "Earth",
         "planet_img": "Urrey",
         "planet_type_symbol": "surrey0@cafepress.com",
@@ -39,7 +39,7 @@ const data = [
         "defense": "Lunar shield defense"
     },
     {
-        "id": "",
+        "id": "mars",
         "planet_name": "Mars",
         "planet_img": "Urrey",
         "planet_type_symbol": "surrey0@cafepress.com",
@@ -52,7 +52,7 @@ const data = [
         "defense": "Frozen armor defense"
     },
     {
-        "id": "",
+        "id": "jupiter",
         "planet_name": "Jupiter",
         "planet_img": "Urrey",
         "planet_type_symbol": "surrey0@cafepress.com",
@@ -65,7 +65,7 @@ const data = [
         "defense": "Magnetic pulse defense"
     },
     {
-        "id": "",
+        "id": "saturn",
         "planet_name": "Saturn",
         "planet_img": "Urrey",
         "planet_type_symbol": "surrey0@cafepress.com",
@@ -78,7 +78,7 @@ const data = [
         "defense": "Gyroscope spin defense"
     },
     {
-        "id": "",
+        "id": "uranus",
         "planet_name": "Uranus",
         "planet_img": "Urrey",
         "planet_type_symbol": "surrey0@cafepress.com",
@@ -91,7 +91,7 @@ const data = [
         "defense": "Sideways roll defense"
     },
     {
-        "id": "",
+        "id": "neptune",
         "planet_name": "Neptune",
         "planet_img": "Urrey",
         "planet_type_symbol": "surrey0@cafepress.com",

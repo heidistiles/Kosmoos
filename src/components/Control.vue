@@ -39,9 +39,48 @@ document.title = 'Kosmoonaut Mission Control'
       </section>
 
       <section class="buttons">
-        <box :to="{ name: 'ExplorationHub' }" class="box-button"><h5>Explore solar system</h5></box>
-        <box :to="{ name: 'ArtifactInventory' }" class="box-button"><h5>View mission artifacts</h5></box>
-        <box :to="{ name: 'ResearchArchives' }" class="box-button"><h5>Search data archives</h5></box>
+        <box :to="{ name: 'ExplorationHub' }" class="box-button">
+          <h5>Explore solar system</h5>
+          <svg version="1.1" class="desktop planet" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               viewBox="0 0 68.47 41" style="fill:currentColor;enable-background:new 0 0 68.47 41;" xml:space="preserve">
+            <path class="st0" d="M68.24,9.24c-1.72-4.88-11.41-4.21-19.24-2.79c-0.34,0.06-0.71,0.14-1.06,0.21C44.18,2.58,38.82,0,32.85,0
+              C21.87,0,12.91,8.68,12.4,19.53c-0.36,0.2-0.71,0.4-1.05,0.6c-8.63,5.02-12.37,9.4-11.1,13c0.98,2.78,4.55,3.82,9.29,3.82
+              c2.95,0,6.34-0.41,9.83-1.05c3.61,3.17,8.32,5.1,13.49,5.1c9.95,0,18.26-7.13,20.11-16.54C62.01,19.86,69.95,14.13,68.24,9.24z
+               M32.85,4c9.1,0,16.5,7.4,16.5,16.5c0,0.47-0.03,0.92-0.07,1.38c-3.63,1.75-7.93,3.56-12.93,5.32c-5.98,2.1-11.22,3.51-15.65,4.42
+              c-2.69-2.94-4.35-6.83-4.35-11.12C16.35,11.4,23.75,4,32.85,4z M4.01,31.8c-0.16-0.44,0.95-3.2,8.66-7.8
+              c0.54,3.1,1.76,5.96,3.53,8.41C8.65,33.51,4.39,32.87,4.01,31.8z M32.85,37c-2.99,0-5.79-0.81-8.22-2.21
+              c4.8-1.14,9.44-2.55,13.04-3.81c3.02-1.06,6.69-2.5,10.42-4.19C45.62,32.77,39.72,37,32.85,37z M53.32,19.81
+              c-0.12-3.48-1.1-6.73-2.74-9.57c9.88-1.68,13.65-0.37,13.89,0.32C64.87,11.73,61.31,15.44,53.32,19.81z"/>
+            </svg>
+        </box>
+        <box :to="{ name: 'ArtifactInventory' }" class="box-button">
+          <h5>View mission artifacts</h5>
+          <svg class="desktop badge" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+               viewBox="0 0 41.96 61.07" style="fill:currentColor;enable-background:new 0 0 41.96 61.07;" xml:space="preserve">
+            <g>
+              <path class="st0" d="M41.96,20.5c0-11.3-9.2-20.5-20.5-20.5S0.96,9.2,0.96,20.5c0,4.94,1.76,9.49,4.69,13.03L0,56.38l11.07-5.3
+                l7.45,9.7l2-8.35l2.32,8.65l7.18-9.9l11.17,4.98L35.6,35.3C39.51,31.57,41.96,26.32,41.96,20.5z M21.46,4c9.1,0,16.5,7.4,16.5,16.5
+                S30.56,37,21.46,37c-9.1,0-16.5-7.4-16.5-16.5S12.36,4,21.46,4z M16.58,51.68l-4.31-5.61l-6.35,3.04l3.06-12.38
+                c2.89,2.23,6.38,3.71,10.19,4.14L16.58,51.68z M35.15,49.08l-6.47-2.88l-4.16,5.73l-2.06-7.68l0.8-3.35
+                c3.25-0.29,6.27-1.34,8.9-2.96L35.15,49.08z"/>
+                <path class="st0" d="M21.46,31c5.79,0,10.5-4.71,10.5-10.5S27.25,10,21.46,10c-5.79,0-10.5,4.71-10.5,10.5S15.67,31,21.46,31z
+                 M21.46,14c3.58,0,6.5,2.92,6.5,6.5s-2.92,6.5-6.5,6.5s-6.5-2.92-6.5-6.5S17.87,14,21.46,14z"/>
+            </g>
+          </svg>
+        </box>
+        <box :to="{ name: 'ResearchArchives' }" class="box-button">
+          <h5>Search data archives</h5>
+          <svg version="1.1" class="desktop magnify" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+               viewBox="0 0 51.45 55.44" style="fill:currentColor;enable-background:new 0 0 51.45 55.44;" xml:space="preserve">
+            <g>
+              <path class="st0" d="M29,20.5c0,4.69-3.81,8.5-8.5,8.5v4C27.39,33,33,27.39,33,20.5H29z"/>
+                          <path class="st0" d="M50.47,49.74L35.34,34.61C38.84,30.93,41,25.97,41,20.5C41,9.2,31.8,0,20.5,0C9.2,0,0,9.2,0,20.5
+                S9.2,41,20.5,41c3.41,0,6.62-0.85,9.45-2.33l15.79,15.79c0.65,0.65,1.51,0.98,2.36,0.98s1.71-0.33,2.37-0.98
+                c0.63-0.63,0.98-1.47,0.98-2.36C51.45,51.21,51.1,50.37,50.47,49.74z M4,20.5C4,11.4,11.4,4,20.5,4S37,11.4,37,20.5
+                C37,29.6,29.6,37,20.5,37S4,29.6,4,20.5z"/>
+              </g>
+            </svg>
+        </box>
       </section>
     </card>
   </base-template>
@@ -66,5 +105,40 @@ document.title = 'Kosmoonaut Mission Control'
       gap: 0;
       height: 35%;
     }
+  }
+
+  @media (min-width: 1040px) {
+    .buttons {
+      flex-direction: row;
+      height: 67%;
+
+      a {
+        justify-content: flex-start;
+        padding: 2rem;
+      }
+    }
+
+    .box-button {
+      flex-basis: 33%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      svg {
+        padding-top: 33%;
+
+        &.planet {
+          width: 90%;
+        }
+        &.badge {
+          width: 55%;
+        }
+        &.magnify {
+          width: 65%;
+        }
+      }
+    }
+
+
   }
 </style>

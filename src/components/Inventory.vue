@@ -55,6 +55,22 @@ section {
   }
 }
 
+@media (min-width: 1040px) {
+  .inventoryLinks {
+    max-width: 22.5%;
+    flex-basis: 25%;
+    max-height: 47%;
+  }
 
-
+  section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3%;
+    row-gap: 2%;
+    overflow-y: unset;
+    height: 67%;
+  }
+}
 </style>

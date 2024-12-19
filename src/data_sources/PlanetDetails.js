@@ -39,7 +39,7 @@ const data = [
         "id": "mars",
         "planet_name": "Mars",
         "planet_img": "Urrey",
-        "caught_on_camera": "surrey0@cafepress.com",
+        "caught_on_camera": "Even with the naked eye Mars lives up to its name as the red planet. This red color comes from the oxidized iron in the form of Fe2O3 on its surface. Oxidation is a type of chemical reaction that results in losing electrons. In this case, the type of oxidation is corrosion, a chemical reaction resulting in deterioration of a metal, and the type of corrosion is rusting, which specifically refers to the reaction of iron with water. Another significant feature are it's frosty ice caps, one sign that Mars likely used to have more water than it does now.",
         "measuring_up": "Male",
         "time_is_of_the_essence": "Face to face client-driven encryption",
         "poetry_in_motion": "Face to face client-driven encryption",

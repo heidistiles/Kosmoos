@@ -18,16 +18,11 @@
     justify-content: center;
     height: 100%;
 
-    :deep(p) {
-
-        color: red;
-    }
     &:hover {
       background-color: rgb(var(--bright-green));
       color: rgb(var(--dark-green));
 
       :deep(.resourcesDash) {
-        border: blue 1px solid;
         border-bottom: 6px dashed rgb(var(--dark-green));
       }
     }

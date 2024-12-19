@@ -8,10 +8,15 @@ document.title = 'Kosmoonaut Mission Protocol'
 
 <template>
   <base-template>
-    <card>
+    <card class="mobile">
       <h2>Kosmoonaut Mission Brief</h2>
       <dash/>
       <h3>Space explorer, your mission is to visit each planet, beat its knowledge challenge, and find new artifacts.<br/><span>And now, ad astra!</span></h3>
+    </card>
+    <card class="desktop">
+      <h2>Welcome to the Kosmoonaut Brigade, space explorer!</h2>
+      <dash class=""/>
+      <h3>Your mission is to visit each planet of the solar system, beat its knowledge challenge, and discover new astronomical artifacts.<br/><span>And now, ad astra!</span></h3>
     </card>
   </base-template>
 </template>
@@ -29,4 +34,5 @@ document.title = 'Kosmoonaut Mission Protocol'
   span {
     line-height: 155%;
   }
+
 </style>
