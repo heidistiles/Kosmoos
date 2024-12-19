@@ -337,7 +337,9 @@ function getId(currentPath) {
 
 #fullpage {
   height: 100vh;
-  background-color: darkblue;
+  background-color: #000033;
+  background-image: url("../assets/SVGs/General/Stars.svg"), linear-gradient(to bottom right, #000, #001, #002, #003, #004, #006, #008, #006, #004, #003, #002, #001, #000);
+  background-size: 25%, 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

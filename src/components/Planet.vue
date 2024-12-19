@@ -61,4 +61,16 @@ document.title = planet.planet_name + ' Mission Challenge'
   section {
     height: 40%;
   }
+
+  h3 {
+    padding-top: 2rem;
+
+    &:nth-child(1) {
+      padding-top: 0;
+    }
+  }
+
+  p {
+    padding-top: 0.75rem;
+  }
 </style>

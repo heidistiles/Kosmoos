@@ -98,6 +98,12 @@ html a {
   border: 0.75vh solid rgb(var(--bright-green));
   border-radius: 50%;
   background-color: rgb(var(--dark-green));
+  display: flex;
+
+  a {
+    width: 100%;
+    height: 100%;
+  }
 
   &.small {
     width: 8vh;
@@ -111,42 +117,17 @@ html a {
 }
 
 .scrolling {
+  padding-right: 1%;
   overflow-y: scroll;
   scrollbar-color: rgba(var(--bright-green), 1) rgb(var(--dark-green), 0);
+  scrollbar-gutter: stable;
 }
 
+.nobreak {
+  white-space: nowrap;
+}
 
-/*a {*/
-/*  font-weight: 500;*/
-/*  text-decoration: inherit;*/
-/*}*/
-/*a:hover {*/
-/*}*/
-
-/*nav {*/
-/*}*/
-
-/*body {*/
-/*  margin: 0;*/
-/*  display: flex;*/
-/*  place-items: center;*/
-/*  min-width: 320px;*/
-/*  min-height: 100vh;*/
-/*}*/
-
-/*button {*/
-/*  cursor: pointer;*/
-/*}*/
-/*button:hover {*/
-/*  border-color: #646cff;*/
-/*}*/
-/*button:focus,*/
-/*button:focus-visible {*/
-/*  outline: 4px auto -webkit-focus-ring-color;*/
-/*}*/
-
-#app {
-  /*margin: 0 auto;*/
-  /*padding: 2rem;*/
-  /*text-align: center;*/
+.super {
+  vertical-align: super;
+  font-size: clamp(1.5rem, 5vw, 2.1vh);
 }

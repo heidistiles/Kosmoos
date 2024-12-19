@@ -9,6 +9,8 @@
 </template>
 
 <style scoped>
+
+
   article {
     position: relative;
     width: clamp(30rem, 90vw, 40vh);
@@ -22,13 +24,17 @@
     justify-content: space-between;
   }
 
-  :deep(*) {
-    //border: 1px red solid;
+  :deep(section) {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    flex-grow: 1;
   }
 
   :deep(h2) {
-    font-size: clamp(5rem, 15vw, 6.4vh);
+    font-size: clamp(5rem, 15vw, 6.2vh);
     line-height: 100%;
+    padding-bottom: 3rem;
   }
 
   :deep(h3) {
@@ -41,9 +47,15 @@
     line-height: 100%;
   }
 
+  :deep(h5) {
+    font-size: clamp(2.25rem, 8vw, 3.15vh);
+    line-height: 100%;
+  }
+
   :deep(p), :deep(a) {
     font-size: clamp(2rem, 6.6vw, 2.8vh);
-    line-height: 100%;
+    line-height: 125%;
+    hyphens: auto;
     //border: 1px solid red;
   }
 
@@ -52,8 +64,10 @@
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
-    align-items: stretch;
-    background-color: red;
+
+    :deep(a) {
+      flex-grow: 1;
+    }
   }
 
 </style>

@@ -1,25 +1,27 @@
 const data = [
     {
-        id: "The Stars: A New Way to See Them",
+        id: "The Stars:",
+        subtitle: "A New Way to See Them",
         type: "books",
         author: "H. A. Rey",
-        publication: "",
-        description: "",
-        link: ""
+        publication: "1962",
+        age_range: "12+",
+        description: "Reimagining the constellations' connections to make their pictures more obvious in the night sky",
+        link: "https://www.harpercollins.com/products/the-stars-a-new-way-to-see-them-h-a-rey?variant=40948388003874"
     },
     {
-        id: "Mars: The Red Planet",
+        id: "Mars:",
+        subtitle: "The Red Planet",
         type: "books",
         author: "Elizabeth Carney",
         publication: "2016",
         age_range: "6–8",
-        description: "Budding scientists and kids curious about Earth’s next-door neighbor can blast off to the red planet!\n" +
-            "\n" +
-            "This highly visual book will cover all kinds of topics, from extreme weather to high-tech rovers to plans for a human colony on Mars. Complete with up-to-date facts about water and all the latest discoveries, Mars: The Red Planet comes at an exciting time for space exploration.",
+        description: "Everything you need to know about our rusty neighbor (and possibly home for humans of the future)",
         link: "https://www.penguinrandomhouse.com/books/546321/mars-the-red-planet-by-elizabeth-carney/"
     },
     {
-        id: "The Secret Life of Stars: Astrophysics for Everyone",
+        id: "The Secret Life of Stars:",
+        subtitle: "Astrophysics for Everyone",
         type: "books",
         author: "Lisa Harvey-Smith",
         publication: "",
@@ -28,17 +30,17 @@ const data = [
     },
     {
         id: "Science Comics: Solar System",
+        subtitle: "Our Place in Space",
         type: "books",
         author: "Rosemary Mosco, illustrated by Jon Chad",
         publication: "2018",
         age_range: "9–13",
-        description: "With Science Comics, you can explore the depths of the ocean, the farthest reaches of space, and everything in between! These gorgeously illustrated graphic novels offer wildly entertaining views of their subjects.\n" +
-            "\n" +
-            "In this volume, get up close and personal with Earth's nearest neighbors—Venus with its acid rainstorms, Saturn and its rings of ice, and the heart of it all, the Sun. Humans have always been fascinated by outer space and we’re learning more about our solar system every day. Did you know that our Solar System was born from a cloud of cosmic dust? That Jupiter’s red spot is really a raging storm? Join Sara, Jill, and their space-faring pets on a quest to learn more about the wonders of our Solar System—and beyond!",
+        description: "Discover the planets of the solar system in graphic novel form with space explorers Sara and Jill and their pack of pets",
         link: "https://us.macmillan.com/books/9781626721418/sciencecomicssolarsystem/"
     },
     {
-        id: "Exploring Space: From Galileo to the Mars Rover and Beyond",
+        id: "Exploring Space:",
+        subtitle: "From Galileo to the Mars Rover and Beyond",
         type: "books",
         author: "Martin Jenkins, illustrated by Stephen Biesty",
         publication: "",
@@ -47,6 +49,7 @@ const data = [
     },
     {
         id: "ladida",
+        subtitle: "",
         type: "videos",
         author: "videos",
         publication: "",
@@ -55,6 +58,7 @@ const data = [
     },
     {
         id: "bababa",
+        subtitle: "",
         type: "videos",
         author: "videos",
         publication: "",
@@ -63,6 +67,7 @@ const data = [
     },
     {
         id: "bababa",
+        subtitle: "",
         type: "videos",
         author: "videos",
         publication: "",
@@ -71,6 +76,7 @@ const data = [
     },
     {
         id: "bababa",
+        subtitle: "",
         type: "videos",
         author: "videos",
         publication: "",
@@ -79,6 +85,7 @@ const data = [
     },
     {
         id: "bababa",
+        subtitle: "",
         type: "videos",
         author: "videos",
         publication: "",
@@ -87,6 +94,7 @@ const data = [
     },
     {
         id: "nanananana",
+        subtitle: "",
         type: "websites",
         author: "websites",
         publication: "",
@@ -95,6 +103,7 @@ const data = [
     },
     {
         id: "nanananana",
+        subtitle: "",
         type: "websites",
         author: "websites",
         publication: "",
@@ -103,6 +112,7 @@ const data = [
     },
     {
         id: "nanananana",
+        subtitle: "",
         type: "websites",
         author: "websites",
         publication: "",
@@ -111,6 +121,7 @@ const data = [
     },
     {
         id: "nanananana",
+        subtitle: "",
         type: "websites",
         author: "websites",
         publication: "",
@@ -119,6 +130,7 @@ const data = [
     },
     {
         id: "nanananana",
+        subtitle: "",
         type: "websites",
         author: "websites",
         publication: "",
@@ -127,6 +139,7 @@ const data = [
     },
     {
         id: "banana",
+        subtitle: "",
         type: "locations",
         author: "locations",
         publication: "",
@@ -135,6 +148,7 @@ const data = [
     },
     {
         id: "banana",
+        subtitle: "",
         type: "locations",
         author: "locations",
         publication: "",
@@ -143,6 +157,7 @@ const data = [
     },
     {
         id: "banana",
+        subtitle: "",
         type: "locations",
         author: "locations",
         publication: "",
@@ -151,6 +166,7 @@ const data = [
     },
     {
         id: "banana",
+        subtitle: "",
         type: "locations",
         author: "locations",
         publication: "",
@@ -159,6 +175,7 @@ const data = [
     },
     {
         id: "banana",
+        subtitle: "",
         type: "locations",
         author: "locations",
         publication: "",

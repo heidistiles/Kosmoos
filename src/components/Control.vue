@@ -10,7 +10,7 @@ document.title = 'Kosmoonaut Mission Control'
 
 <template>
   <base-template>
-    <card id="controlCard">
+    <card>
       <div class="small circle">
         <router-link :to="{ name: 'Protocol' }">
           <circle>
@@ -32,29 +32,39 @@ document.title = 'Kosmoonaut Mission Control'
         </router-link>
       </div>
 
-      <div>
+      <section>
         <h2>Greetings, Kosmoonaut!</h2>
         <dash></dash>
         <h3>Choose program</h3>
-      </div>
+      </section>
 
-      <div class="buttons">
-        <router-link :to="{ name: 'ExplorationHub' }">
-          <box><h4>Explore solar system</h4></box>
-        </router-link>
-        <router-link :to="{ name: 'ArtifactInventory' }">
-          <box><h4>View mission artifacts</h4></box>
-        </router-link>
-        <router-link :to="{ name: 'Protocol' }">
-          <box><h4>Search data archives</h4></box>
-        </router-link>
-      </div>
+      <section class="buttons">
+        <box :to="{ name: 'ExplorationHub' }" class="box-button"><h5>Explore solar system</h5></box>
+        <box :to="{ name: 'ArtifactInventory' }" class="box-button"><h5>View mission artifacts</h5></box>
+        <box :to="{ name: 'ResearchArchives' }" class="box-button"><h5>Search data archives</h5></box>
+      </section>
     </card>
   </base-template>
 </template>
 
 <style scoped>
+
+  h2 {
+    padding-bottom: 0;
+  }
+
   a {
     text-align: center;
+  }
+
+  section {
+    a {
+      flex-grow: 1;
+    }
+
+    &:nth-of-type(1) {
+      gap: 0;
+      height: 35%;
+    }
   }
 </style>
